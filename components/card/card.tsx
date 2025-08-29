@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 import { CardProps } from "./card.types";
 import Image from "next/image";
+import * as motion from "motion/react-client";
 import styles from "@/components/card/card.module.css";
 
-export default function Card({ imgUrl, size = "medium" }: CardProps) {
+const DEFAULT_IMG_URL =
+  "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1159&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+
+export default function Card({
+  imgUrl = DEFAULT_IMG_URL,
+  size = "medium",
+  id,
+}: CardProps) {
   const [imgSrc, setImgSrc] = useState(imgUrl); // handle image errors while showing default image
+  const [isHovered, setIsHovered] = useState(false);
 
   const classMap = {
     large: styles.lgItem,
@@ -14,13 +23,32 @@ export default function Card({ imgUrl, size = "medium" }: CardProps) {
 
   const handleError = () => {
     console.log("hi error");
-    setImgSrc("/static/clifford.webp");
+    setImgSrc(
+      "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1159&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    );
+  };
+
+  const motionStyles = {
+    zIndex: isHovered ? 999 : 1,
+    position: "relative" as const,
+  };
+
+  const scale = id === 0 || id === 13 ? { scaleY: 1.1 } : { scale: 1.1 };
+
+  const motionProps = {
+    whileHover: { ...scale },
+    whileTap: { scale: 0.95 },
+    onHoverStart: () => setIsHovered(true),
+    onHoverEnd: () => setIsHovered(false),
   };
 
   return (
     <div className={styles.container}>
-      Cards
-      <div className={classMap[size]}>
+      <motion.div
+        className={classMap[size]}
+        style={motionStyles}
+        {...motionProps}
+      >
         <Image
           src={imgSrc}
           alt="clifford picture"
@@ -30,7 +58,7 @@ export default function Card({ imgUrl, size = "medium" }: CardProps) {
           placeholder="blur"
           blurDataURL={imgUrl}
         />
-      </div>
+      </motion.div>
     </div>
   );
 }

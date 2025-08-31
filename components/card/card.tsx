@@ -8,9 +8,10 @@ const DEFAULT_IMG_URL =
   "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1159&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 export default function Card({
+  id,
   imgUrl = DEFAULT_IMG_URL,
   size = "medium",
-  id,
+  hoverStyle,
 }: CardProps) {
   const [imgSrc, setImgSrc] = useState(imgUrl); // handle image errors while showing default image
   const [isHovered, setIsHovered] = useState(false);
@@ -33,7 +34,7 @@ export default function Card({
     position: "relative" as const,
   };
 
-  const scale = id === 0 || id === 13 ? { scaleY: 1.1 } : { scale: 1.1 };
+  const scale = hoverStyle === 1 ? { scaleY: 1.1 } : { scale: 1.1 };
 
   const motionProps = {
     whileHover: { ...scale },

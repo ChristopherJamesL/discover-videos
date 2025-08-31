@@ -38,6 +38,11 @@
   line-height: 1.25rem /* 20px */;
   color: var(--gray20);
   align-self: center;
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
 }
 
 .title {

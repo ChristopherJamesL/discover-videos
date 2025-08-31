@@ -3,8 +3,13 @@ import Card from "./card";
 import styles from "./section-cards.module.css";
 import { SectionCardsProps } from "./section-cards.types";
 
-export default function SectionCards({ title }: SectionCardsProps) {
+export default function SectionCards({
+  title,
+  videos,
+  size = "medium",
+}: SectionCardsProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  console.log("size: ", size);
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -27,19 +32,24 @@ export default function SectionCards({ title }: SectionCardsProps) {
     <section className={styles.container}>
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.cardWrapper} ref={scrollRef}>
-        <Card id={0} imgUrl="/static/clifford.webp" size="large" />
-        <Card imgUrl="/static/clifford.webp" size="large" />
-        <Card imgUrl="/static/clifford.webp" size="large" />
-        <Card imgUrl="/static/clifford.webp" size="large" />
-        <Card imgUrl="/static/clifford.webp" size="large" />
-        <Card imgUrl="/static/clifford.webp" size="large" />
-        <Card imgUrl="/static/clifford.webp" size="large" />
-        <Card imgUrl="/static/clifford.webp" size="large" />
-        <Card imgUrl="/static/clifford.webp" size="large" />
-        <Card imgUrl="/static/clifford.webp" size="large" />
-        <Card imgUrl="/static/clifford.webp" size="large" />
-        <Card imgUrl="/static/clifford.webp" size="large" />
-        <Card id={13} imgUrl="/static/clifford.webp" size="large" />
+        {videos.map((video, i) => {
+          const {
+            id,
+            thumbnails: {
+              high: { url },
+            },
+          } = video;
+          const hoverStyle = i === 0 || i === videos.length - 1 ? 1 : 2;
+          return (
+            <Card
+              key={i}
+              id={id}
+              hoverStyle={hoverStyle}
+              imgUrl={url}
+              size={size}
+            />
+          );
+        })}
       </div>
     </section>
   );

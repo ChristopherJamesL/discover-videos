@@ -1,7 +1,8 @@
 export interface CardProps {
-  id?: number;
+  id?: string | undefined;
   imgUrl: string;
   size: CardSize;
+  hoverStyle: number;
 }
 
 export type CardSize = "large" | "medium" | "small";

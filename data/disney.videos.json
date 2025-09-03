@@ -1,0 +1,862 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "bTDFuWzEdpwm1iB3VEbvYScHMZo",
+  "nextPageToken": "CBkQAA",
+  "regionCode": "CA",
+  "pageInfo": {
+    "totalResults": 1000000,
+    "resultsPerPage": 25
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "goBKu5b0I1B0lRSK7L_af-_XFKo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "hJnAHzo4-KI"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-16T16:01:15Z",
+        "channelId": "UC_IRYSp4auq7hKLvziWVH6w",
+        "title": "Hoppers | Teaser Trailer | In theaters March 6",
+        "description": "We put this into this . Watch the new teaser for Disney & Pixar's #Hoppers, arriving in theaters March 6, 2026. ▻ SUBSCRIBE ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hJnAHzo4-KI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hJnAHzo4-KI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hJnAHzo4-KI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Pixar",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-16T16:01:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "63daCjuE5e3Rtrb8WA3c8NpOhIw",
+      "id": {
+        "kind": "youtube#playlist",
+        "playlistId": "PLku4OZMkmaZ5m_7YHB9HNrSFoM_Utp3Gl"
+      },
+      "snippet": {
+        "publishedAt": "2019-09-04T20:46:03Z",
+        "channelId": "UCEpO-mqe9VH_YwHCmoAs5wA",
+        "title": "ALL DISNEY LIVE ACTION MOVIE TRAILERS",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/K2CTJS12RdI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/K2CTJS12RdI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/K2CTJS12RdI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Luis Manuel Martínez Gil",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-09-04T20:46:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "H54l08ycyRz6odTiMN2Ch5cPmII",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BjkIOU5PhyQ"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-30T12:47:33Z",
+        "channelId": "UC_976xMxPgzIa290Hqtk-9g",
+        "title": "Zootopia 2 | Trailer",
+        "description": "Hopps & Wilde are BACK Get ready for #Zootopia2, only in theaters November 26! After cracking the biggest case in ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BjkIOU5PhyQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BjkIOU5PhyQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BjkIOU5PhyQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Walt Disney Animation Studios",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-30T12:47:33Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Ul6PBvvcqRhJShgS-VwWo6za95k",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ETVi5_cnnaE"
+      },
+      "snippet": {
+        "publishedAt": "2025-03-19T16:00:06Z",
+        "channelId": "UC_IRYSp4auq7hKLvziWVH6w",
+        "title": "Elio | Official Trailer",
+        "description": "if any aliens are listening... the new trailer for Disney and Pixar's Elio is here! See the movie, only in theaters, June 20! This ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ETVi5_cnnaE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ETVi5_cnnaE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ETVi5_cnnaE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Pixar",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-03-19T16:00:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cXocOoXFeK6vFw0ewd--X3fKTlo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CaimKeDcudo"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-29T13:00:05Z",
+        "channelId": "UC_976xMxPgzIa290Hqtk-9g",
+        "title": "Disney&#39;s Encanto | Official Trailer",
+        "description": "This November, find your magic. ✨   Watch the brand-new trailer for Disney's Encanto, coming to theaters this Thanksgiving.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CaimKeDcudo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CaimKeDcudo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CaimKeDcudo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Walt Disney Animation Studios",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-29T13:00:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "A9-uGByGapyA3UCB3m-Mgg3qDSs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IyJzhtJEtoU"
+      },
+      "snippet": {
+        "publishedAt": "2025-06-06T16:00:26Z",
+        "channelId": "UC_5niPa-d35gg88HaS7RrIw",
+        "title": "Freakier Friday | Official Trailer | In Theaters August 8",
+        "description": "Get FREAKing ready Watch the new trailer for Freakier Friday and experience it only in theaters August 8. SUBSCRIBE to get ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IyJzhtJEtoU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IyJzhtJEtoU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IyJzhtJEtoU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Disney",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-06-06T16:00:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "u7jjxZVlY1t4Aj_Boyt2YWeImYE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "SDFHicp49EE"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-16T16:38:36Z",
+        "channelId": "UCP6nJ-Elnfnpjv6HQRsv1Cw",
+        "title": "Cara de Um, Focinho de Outro | Teaser Oficial Dublado",
+        "description": "Isso vai parar dentro disso . #CaraDeUmFocinhoDeOutro, da Disney e Pixar, em março nos cinemas.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SDFHicp49EE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SDFHicp49EE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SDFHicp49EE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Walt Disney Studios BR",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-16T16:38:36Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bE0Ofi7l8WVqRiE4CD6oDVLBQOk",
+      "id": {
+        "kind": "youtube#playlist",
+        "playlistId": "PLsNnZLPTcFBuk42qJbrALs9EDUq5vgfqk"
+      },
+      "snippet": {
+        "publishedAt": "2022-03-14T00:37:00Z",
+        "channelId": "UCjVftY1e2p-B6EsAH5AokjQ",
+        "title": "Walt Disney Animation Studios Trailers (1937-2023) (100th Anniversary Special)",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CcWD5hI44WI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CcWD5hI44WI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CcWD5hI44WI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Kim Gunness-Reece",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-03-14T00:37:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "19TB1RAZowhf6U3jApFzwNmHzqM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8yMZB8FiphM"
+      },
+      "snippet": {
+        "publishedAt": "2025-08-30T21:45:01Z",
+        "channelId": "UCpWy4NN15aSZlUDojMz7xAA",
+        "title": "INSIDE OUT 3  - OFFICIAL TRAILER (2025) | Disney &amp; Pixar | Meet the New Emotion",
+        "description": "Share your reactions, theories, and anticipation in the comments below. And don't forget to hit that SUBSCRIBE button to stay ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8yMZB8FiphM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8yMZB8FiphM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8yMZB8FiphM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "PrimeFlix TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-08-30T21:45:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "0TgUjWSbXEU7nxRPoCd9g9tPl94",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "J13BsdX7JZU"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-30T13:06:47Z",
+        "channelId": "UC8huWhDjI8UJK4bqo8BJ9WQ",
+        "title": "Zootopia 2 | Tráiler oficial | Doblado",
+        "description": "Hopps y Wilde regresan ¡Prepárense para #Zootopia2, solo en cines el 27 de noviembre! ¡Haz click en \"Suscribirse\" para ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/J13BsdX7JZU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/J13BsdX7JZU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/J13BsdX7JZU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Disney Studios LA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-30T13:06:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "p6leB4zHrUaMz_2R9BREln-mpyg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Rl8sZRuFiNs"
+      },
+      "snippet": {
+        "publishedAt": "2025-03-19T17:00:20Z",
+        "channelId": "UCBH4HCPqGYZ0Yr6peYP0yag",
+        "title": "Elio | Trailer Ufficiale | Dal 18 Giugno al Cinema",
+        "description": "Se qualche alieno è in ascolto... Il nuovo trailer del film Disney & Pixar, #Elio è qui! Non perdere il film, dal 18 Giugno solo al ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Rl8sZRuFiNs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Rl8sZRuFiNs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Rl8sZRuFiNs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Disney IT",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-03-19T17:00:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "z2yRF7Y4ZZmWlp_qkLPQCSqjM74",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "iV46TJKL8cU"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-03T15:01:02Z",
+        "channelId": "UC_5niPa-d35gg88HaS7RrIw",
+        "title": "Disney’s Snow White | Official Trailer | In Theaters March 21",
+        "description": "Magic mirror on the wall, show us the story that started it all. Watch the official trailer for Disney's #SnowWhite, only in theaters ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iV46TJKL8cU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iV46TJKL8cU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iV46TJKL8cU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Disney",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-03T15:01:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "j3aYD6m7FU5prhtltHBjL7sogfE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "F7kfhqgVeIg"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-16T16:16:12Z",
+        "channelId": "UC8huWhDjI8UJK4bqo8BJ9WQ",
+        "title": "Hoppers | Tráiler oficial | Doblado",
+        "description": "Pondremos esto dentro de esto . No te pierdas el nuevo adelanto de #Hoppers, de Disney y Pixar, que llega a los cines en ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/F7kfhqgVeIg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/F7kfhqgVeIg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/F7kfhqgVeIg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Disney Studios LA",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-16T16:16:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "eLkldjja7JQxBWSSOaD8Uoud6FI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "nb_fFj_0rq8"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-28T15:00:09Z",
+        "channelId": "UCgjxQJ6TlKqhHax8742ZMdA",
+        "title": "Avatar: Fire and Ash | Official Trailer",
+        "description": "From Director James Cameron, watch the trailer for Avatar: Fire and Ash. Experience the film only in theaters December 19.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nb_fFj_0rq8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nb_fFj_0rq8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nb_fFj_0rq8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Avatar",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-28T15:00:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hvxP3Wh_Hufdg1tmgf1i0LZkuL8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LJGp3FYxE0U"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-17T16:21:41Z",
+        "channelId": "UCP6nJ-Elnfnpjv6HQRsv1Cw",
+        "title": "Tron: Ares | Trailer 2 Oficial Dublado",
+        "description": "Estão a caminho do nosso mundo. #Tron: Ares, em 9 de outubro nos cinemas.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LJGp3FYxE0U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LJGp3FYxE0U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LJGp3FYxE0U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Walt Disney Studios BR",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-17T16:21:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hNkCEPOqKgedzHU78wWZbF86mwI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IRYFJ9ECfCY"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-30T13:00:14Z",
+        "channelId": "UCakQLdwrxuo0KhJ49Sq2csA",
+        "title": "Zootopie 2 - Nouvelle bande-annonce | Disney",
+        "description": "Judy & Nick sont de retour ! Zootopie 2, le 26 novembre au cinéma. ▻ Abonnez-vous à notre chaîne Disney+ pour ne ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IRYFJ9ECfCY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IRYFJ9ECfCY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IRYFJ9ECfCY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Disney FR",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-30T13:00:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4S3suiE5_9Fwqudk31zgkIR3KSY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-7CPDmA4nGo"
+      },
+      "snippet": {
+        "publishedAt": "2025-03-19T18:07:37Z",
+        "channelId": "UCMm8XFMnB2wODJqYt6d6OJQ",
+        "title": "Elio | Nuevo Tráiler Oficial en español | HD",
+        "description": "Si hay algún extraterrestre escuchando… ¡el nuevo tráiler de #Elio, de Disney y Pixar ya está aquí! 9 de julio solo en cines.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-7CPDmA4nGo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-7CPDmA4nGo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-7CPDmA4nGo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Disney España",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-03-19T18:07:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kbsY4WuzrtWrWD-AgXPxAZ6Y5bU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "gmRKv7n2If8"
+      },
+      "snippet": {
+        "publishedAt": "2021-02-17T13:00:14Z",
+        "channelId": "UC_5niPa-d35gg88HaS7RrIw",
+        "title": "Disney&#39;s Cruella | Official Trailer",
+        "description": "Brilliant. Bad. A little bit mad. May 2021. Get tickets to experience Disney's #Cruella in theaters or pre-order on #DisneyPlus with ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gmRKv7n2If8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gmRKv7n2If8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gmRKv7n2If8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Disney",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-02-17T13:00:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "0zkLSIP6pvAyv6uV2mf-IMRz6Xs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "O4MqheZrK5k"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-16T16:26:37Z",
+        "channelId": "UCvv3SF2SzAAOAkvs_r7vEvA",
+        "title": "Hoppers I Teaser Trailer I Ab März 2026 exklusiv im Kino",
+        "description": "Wir stecken das da rein . Schau dir den neuen Teaser Trailer für Disney & Pixar's #Hoppers an, ab März 2026 im Kino.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/O4MqheZrK5k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/O4MqheZrK5k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/O4MqheZrK5k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Disney Deutschland",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-16T16:26:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "AAtUf6X6ahMGCruF9cQoWEc65dg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "oLnS1Ij9-Kk"
+      },
+      "snippet": {
+        "publishedAt": "2025-03-12T16:18:23Z",
+        "channelId": "UCP6nJ-Elnfnpjv6HQRsv1Cw",
+        "title": "Lilo e Stitch | Trailer Oficial Dublado",
+        "description": "Ohana significa família. #LiloEStitch, em 22 de maio nos cinemas.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oLnS1Ij9-Kk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oLnS1Ij9-Kk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oLnS1Ij9-Kk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Walt Disney Studios BR",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-03-12T16:18:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YGKZ398en-XIOO5kRt9NrEwMle8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YShVEXb7-ic"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-17T16:00:55Z",
+        "channelId": "UC_5niPa-d35gg88HaS7RrIw",
+        "title": "Tron: Ares | Official Trailer",
+        "description": "Watch the brand-new trailer for Tron: Ares and experience it in theaters, filmed for IMAX, October 10. Tron: Ares follows a highly ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YShVEXb7-ic/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YShVEXb7-ic/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YShVEXb7-ic/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Disney",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-17T16:00:55Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Q3l07QjSgoHVzcpHFs4RGp7ofI8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_UmBPK3D6X4"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-30T13:42:20Z",
+        "channelId": "UCP6nJ-Elnfnpjv6HQRsv1Cw",
+        "title": "Zootopia 2 | Trailer Oficial Dublado",
+        "description": "Hopps e Wilde estão de volta. #Zootopia2, em 27 de novembro nos cinemas.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_UmBPK3D6X4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_UmBPK3D6X4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_UmBPK3D6X4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Walt Disney Studios BR",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-30T13:42:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WWzg6fCAWxSEj9SuKm2a2CJBzMI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sAiWywScOMU"
+      },
+      "snippet": {
+        "publishedAt": "2025-03-19T16:20:46Z",
+        "channelId": "UCP6nJ-Elnfnpjv6HQRsv1Cw",
+        "title": "Elio | Trailer Oficial Dublado",
+        "description": "Sinal detectado! Assista ao novo trailer de #Elio, da Disney e Pixar. Em 19 de junho nos cinemas.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sAiWywScOMU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sAiWywScOMU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sAiWywScOMU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Walt Disney Studios BR",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-03-19T16:20:46Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "vZa_ZMe71dR4cgwSFhkffBHZkgc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mYfJxlgR2jw"
+      },
+      "snippet": {
+        "publishedAt": "2021-04-28T13:00:15Z",
+        "channelId": "UC_IRYSp4auq7hKLvziWVH6w",
+        "title": "Disney and Pixar’s Luca | Official Trailer | Disney+",
+        "description": "This summer, you're invited to Portorosso. Watch the new trailer for Disney and Pixar's Luca and see the film June 18 on Disney+.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mYfJxlgR2jw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mYfJxlgR2jw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mYfJxlgR2jw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Pixar",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-04-28T13:00:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2ZivbvkxKZBWgbkbmCBMHrP1M0o",
+      "id": {
+        "kind": "youtube#playlist",
+        "playlistId": "PLkeFPLkG3JEIbYJunfA_s31B81I6lBZoO"
+      },
+      "snippet": {
+        "publishedAt": "2015-11-11T11:42:36Z",
+        "channelId": "UCODIzvwfUXuSRN9IQVloFBQ",
+        "title": "Disney/Pixar Film Trailers (1995-Present)",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/50rAKjuTXbc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/50rAKjuTXbc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/50rAKjuTXbc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "PickledAOP85!",
+        "liveBroadcastContent": "none",
+        "publishTime": "2015-11-11T11:42:36Z"
+      }
+    }
+  ]
+}

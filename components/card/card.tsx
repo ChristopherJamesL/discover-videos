@@ -16,6 +16,9 @@ export default function Card({
   const [imgSrc, setImgSrc] = useState(imgUrl); // handle image errors while showing default image
   const [isHovered, setIsHovered] = useState(false);
 
+  const sizeProps =
+    size === "small" ? "300px" : size === "medium" ? "158px" : "218px";
+
   const classMap = {
     large: styles.lgItem,
     medium: styles.mdItem,
@@ -53,11 +56,10 @@ export default function Card({
         <Image
           src={imgSrc}
           alt="clifford picture"
-          layout="fill"
+          fill
           onError={handleError}
           className={styles.cardImg}
-          placeholder="blur"
-          blurDataURL={imgUrl}
+          sizes={sizeProps}
         />
       </motion.div>
     </div>

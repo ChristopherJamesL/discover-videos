@@ -1,0 +1,862 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "NkgMzxvH3yCKe7cDNsNqAi6axnw",
+  "nextPageToken": "CBkQAA",
+  "regionCode": "CA",
+  "pageInfo": {
+    "totalResults": 1000000,
+    "resultsPerPage": 25
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "HgnT0k1sw5XkPhQ5J_dZyv7X35M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "T4CB5RPbtCk"
+      },
+      "snippet": {
+        "publishedAt": "2023-03-29T14:30:20Z",
+        "channelId": "UCAuUUnT6oDeKwE6v1NGQxug",
+        "title": "The Unexpected Key to Boosting Your Productivity | The Way We Work, a TED series",
+        "description": "Ever wished you could stop procrastinating and just be as efficient as a machine? Since you're a human, that's not going to ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/T4CB5RPbtCk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/T4CB5RPbtCk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/T4CB5RPbtCk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "TED",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-03-29T14:30:20Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "new4yXDQ5odhTKrOUQBRXxEzk-M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "hSGt_rhu49U"
+      },
+      "snippet": {
+        "publishedAt": "2025-05-30T15:01:19Z",
+        "channelId": "UCA-mWX9CvCTVFWRMb9bKc9w",
+        "title": "How to Be So Productive it Feels ILLEGAL",
+        "description": "Subscribe to The Martell Method Newsletter: https://bit.ly/3XEBXez ▸▸ Get My New Book (Buy Back Your Time): ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hSGt_rhu49U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hSGt_rhu49U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hSGt_rhu49U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Dan Martell",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-05-30T15:01:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "xSFasefYtOhweIXjPJ8ldWiyIwA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "lHfjvYzr-3g"
+      },
+      "snippet": {
+        "publishedAt": "2012-12-12T18:00:12Z",
+        "channelId": "UCC552Sd-3nyi_tk2BudLUzA",
+        "title": "The Science of Productivity",
+        "description": "Made in collaboration with Sparring Mind, the behavioral psychology blog. Read the full productivity post: http://bit.ly/XRcYAY ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/lHfjvYzr-3g/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/lHfjvYzr-3g/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/lHfjvYzr-3g/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "AsapSCIENCE",
+        "liveBroadcastContent": "none",
+        "publishTime": "2012-12-12T18:00:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "dbYyEefbsEFtEYCuWFkLOpRUzSA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qB281BY13b8"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-28T19:52:09Z",
+        "channelId": "UCj-b5d3pgnkpmZxFZcK882g",
+        "title": "4 am routine 🤸🏼\u200d♀️ #fitness #productivity #morningroutine #dayinmylife #morning motivation #gym",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qB281BY13b8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qB281BY13b8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qB281BY13b8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ashlen james",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-28T19:52:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8_bzyGus3FsBrGMddnyLn3b6iiQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jGYmg1LCOAc"
+      },
+      "snippet": {
+        "publishedAt": "2024-02-07T21:24:48Z",
+        "channelId": "UCH-g5AQbCdDMtEmBtGXLXNQ",
+        "title": "Random Productivity Hacks That ACTUALLY Work? 🤨🤓",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jGYmg1LCOAc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jGYmg1LCOAc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jGYmg1LCOAc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "thebeekid",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-02-07T21:24:48Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "S3wuVpEiYmItRKgAb_6cR7jORiU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "9S1unFqJwx8"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-31T17:44:39Z",
+        "channelId": "UC8Av1tO-ha143nNYzxmf1Fg",
+        "title": "Habits That Make You More Productive",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9S1unFqJwx8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9S1unFqJwx8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9S1unFqJwx8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Pierre Dalati",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-31T17:44:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "HqYuEDaUMWM55LGJD2z8HWP1uT8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "fSqNo_EpPcY"
+      },
+      "snippet": {
+        "publishedAt": "2023-12-11T06:10:17Z",
+        "channelId": "UCdgzY0p6w7GhMBCZC1-rq0A",
+        "title": "🎯 Time boxing: where every minute counts and Harvard agrees!",
+        "description": "Set your timer, box your tasks, and watch as 'busy' turns into 'accomplished. Ready to level up your #productivity game?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fSqNo_EpPcY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fSqNo_EpPcY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fSqNo_EpPcY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "SaaS buddy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-12-11T06:10:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kGr_voKQrMiPo4RfUlNy45Tp8H0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "UhdowFCwuGo"
+      },
+      "snippet": {
+        "publishedAt": "2025-02-11T12:00:50Z",
+        "channelId": "UCybXcF5WUxxwjhefKItztsA",
+        "title": "Sam Altman&#39;s Productivity System: Start Using It Today (Fast &amp; Simple)",
+        "description": "Learn the productivity secret Sam Altman, CEO of OpenAI, uses to maximize his output. This simple yet powerful technique will ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UhdowFCwuGo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UhdowFCwuGo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UhdowFCwuGo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Bill Rice Strategy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-02-11T12:00:50Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "f47p2fecuX_1T7D0QptPBEuLVPI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IF62qlXIrxI"
+      },
+      "snippet": {
+        "publishedAt": "2025-08-31T11:52:37Z",
+        "channelId": "UCqDiYCfZuy1oGXCk4UoyCJA",
+        "title": "Study like a pro: Boost your productivity📚",
+        "description": "Want to study without getting distracted? In this video, I'm sharing the best study tricks, tips, and hacks to stay focused and improve ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IF62qlXIrxI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IF62qlXIrxI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IF62qlXIrxI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Facts by Saii",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-08-31T11:52:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "HfkGKSWxxbNopu25XigBh9lsnno",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "VnW5pPV4cK0"
+      },
+      "snippet": {
+        "publishedAt": "2025-03-01T21:04:16Z",
+        "channelId": "UCYVFeFY_4-755hqdPfB2qpw",
+        "title": "How to Make 24 Hours ➡️ 48 Hours #studytips #studywithme #timemanagement #productivity #college",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VnW5pPV4cK0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VnW5pPV4cK0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VnW5pPV4cK0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Mia Yilin",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-03-01T21:04:16Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2wDx5YVslW2BOPHZCz1UljzN_ss",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Pmd6knanPKw"
+      },
+      "snippet": {
+        "publishedAt": "2025-05-22T12:00:47Z",
+        "channelId": "UC2D2CMWXMOVWx7giW1n3LIg",
+        "title": "Maximize Productivity, Physical &amp; Mental Health With Daily Tools | Huberman Lab Essentials",
+        "description": "In this \u2060Huberman Lab Essentials\u2060 episode, I provide a science-based daily protocol designed to enhance performance, mood ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Pmd6knanPKw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Pmd6knanPKw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Pmd6knanPKw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Andrew Huberman",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-05-22T12:00:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lRewVryTNySDG4-flI3XqtREoZ8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "UdML3P1tBoY"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-13T14:20:19Z",
+        "channelId": "UCI4A0dSGeVAEbEYQ4jkcmBg",
+        "title": "A Productive Morning Routine to Reset &amp; Plan 📖☕",
+        "description": "Welcome to a slow yet productive morning routine! Happy weekend, everyone! In today's study vlog, I'm sharing how I reflect on ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UdML3P1tBoY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UdML3P1tBoY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UdML3P1tBoY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Studywithemmane",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-13T14:20:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "TXVCh1CUH-uuwEX77xIOf5a6ncM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "N_Ql2KNBlrk"
+      },
+      "snippet": {
+        "publishedAt": "2025-06-21T23:01:03Z",
+        "channelId": "UClIlacksGohHcNHu3-myNvg",
+        "title": "The difference between hustle culture and mindful productivity explained in 17 seconds🤪",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/N_Ql2KNBlrk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/N_Ql2KNBlrk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/N_Ql2KNBlrk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Martha Krejci",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-06-21T23:01:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "jbMp9fCmag9-TuTeAcCwS9FvIdE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Vg9j__V2T5k"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-31T14:00:37Z",
+        "channelId": "UCb9fs9s67BXlX7rXVzRf5cQ",
+        "title": "How to ACTUALLY Exit your Lazy Era | productivity tips that *work*",
+        "description": "The first 500 people to use my link in the description will receive a one month free trial of Skillshare! Get started today!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Vg9j__V2T5k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Vg9j__V2T5k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Vg9j__V2T5k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Amy Wang",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-31T14:00:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "S6pNg2zsayF14o8w6ONPi9-65FE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "T4dser6ssp0"
+      },
+      "snippet": {
+        "publishedAt": "2024-04-17T22:15:35Z",
+        "channelId": "UCkZjTZNvuxq1CYMS3cwZa1Q",
+        "title": "Maximize Productivity With These Time Management Tools | Dr. Cal Newport &amp; Dr. Andrew Huberman",
+        "description": "Dr. Cal Newport and Dr. Andrew Huberman discuss the concept of time blocking, fixed schedule productivity and deep work.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/T4dser6ssp0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/T4dser6ssp0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/T4dser6ssp0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Huberman Lab Clips",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-04-17T22:15:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "FnMfoAMS5Cb4hGttQuLOna4hOnE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tJYq5QjaIAg"
+      },
+      "snippet": {
+        "publishedAt": "2025-03-10T05:15:35Z",
+        "channelId": "UCYVFeFY_4-755hqdPfB2qpw",
+        "title": "How to Stop Procrastinating in 3 Simple Steps ‼️ #studytips #studywithme #college #productivity",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tJYq5QjaIAg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tJYq5QjaIAg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tJYq5QjaIAg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Mia Yilin",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-03-10T05:15:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "FXVOTvLn5_Md1WWx99ZxCC36Jow",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "H_mgSjmWEio"
+      },
+      "snippet": {
+        "publishedAt": "2024-02-16T16:22:21Z",
+        "channelId": "UC_zwM4BxbNQtWHVseiXoHRw",
+        "title": "5 MacBook apps for coding + productivity",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/H_mgSjmWEio/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/H_mgSjmWEio/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/H_mgSjmWEio/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "agenomicsphd",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-02-16T16:22:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "TH4zIy-Jc4vgvrJtMC9d7-1cNoA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "UxKB_cuvDgw"
+      },
+      "snippet": {
+        "publishedAt": "2025-04-23T14:57:09Z",
+        "channelId": "UC3iwAVSdUwFjuTh7RnMqR2g",
+        "title": "Productive iPad Apps 🗓️✨",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UxKB_cuvDgw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UxKB_cuvDgw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UxKB_cuvDgw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Flourish Planner",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-04-23T14:57:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "91D0kPPBuuQsSLPLA9Sq9LMwYKQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "eAj8AC5RmSg"
+      },
+      "snippet": {
+        "publishedAt": "2021-11-06T21:16:00Z",
+        "channelId": "UCPk2s5c4R_d-EUUNvFFODoA",
+        "title": "Productivity Hack",
+        "description": "I'll edit your college essay! https://nextadmit.com.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/eAj8AC5RmSg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/eAj8AC5RmSg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/eAj8AC5RmSg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Gohar Khan",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-11-06T21:16:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "PFw3NB3oXmGK1MDR339frtxSzfA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Tbb2VGMWOdo"
+      },
+      "snippet": {
+        "publishedAt": "2024-12-06T20:45:02Z",
+        "channelId": "UCUyDOdBWhC1MCxEjC46d-zw",
+        "title": "My Real Productivity Routine",
+        "description": "Want to SCALE your business? Go here: https://www.acquisition.com/yta Want to START a business? Go here: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Tbb2VGMWOdo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Tbb2VGMWOdo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Tbb2VGMWOdo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Alex Hormozi",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-12-06T20:45:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UZAIsCUDsdhiK0FmEOj5TGuZA1w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "1LOlJay5Sbw"
+      },
+      "snippet": {
+        "publishedAt": "2022-10-18T13:00:02Z",
+        "channelId": "UCwAnu01qlnVg1Ai2AbtTMaA",
+        "title": "Top 5 Productivity Tips for Work!",
+        "description": "Grab my free Workspace Toolkit: https://academy.jeffsu.org/?utm_source=youtube&utm_medium=video&utm_campaign=117 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1LOlJay5Sbw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1LOlJay5Sbw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1LOlJay5Sbw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Jeff Su",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-10-18T13:00:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WKAAaTFTqREHQmQwWRdLcFYZv9o",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "X7QmaNpl4P4"
+      },
+      "snippet": {
+        "publishedAt": "2025-07-31T00:00:38Z",
+        "channelId": "UCUyDOdBWhC1MCxEjC46d-zw",
+        "title": "#1 Productivity Hack",
+        "description": "Huge Announcement* My next book is here: $100M Money Models Register free & get big free stuff here: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/X7QmaNpl4P4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/X7QmaNpl4P4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/X7QmaNpl4P4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Alex Hormozi",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-07-31T00:00:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9v60MeBQaRe7x16RCPsFHAB8Alc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "VNneZOxkQdA"
+      },
+      "snippet": {
+        "publishedAt": "2024-06-11T12:21:07Z",
+        "channelId": "UC9qoB5JgECKwB4y2oYC712w",
+        "title": "The best way to increase productivity at work",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VNneZOxkQdA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VNneZOxkQdA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VNneZOxkQdA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ForgeCore",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-06-11T12:21:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KE5Q1PtPlLaqa0jIpRngM24cnes",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "s6px13sOZDE"
+      },
+      "snippet": {
+        "publishedAt": "2025-01-04T12:26:05Z",
+        "channelId": "UCMMSgGr3voFUqS1xYaBVaYQ",
+        "title": "5 productivity apps for STUDENTS📚✨ #trending #shorts",
+        "description": "productivity #students #study #trendingshorts #youtubeshorts #viral #apps #tech #ipad #phone #studymotivation #viralvideo.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/s6px13sOZDE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/s6px13sOZDE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/s6px13sOZDE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Advika Singh",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-01-04T12:26:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "e9ZlU_pJUuMCUMs00RuETRZ4rRU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qcvvZElS088"
+      },
+      "snippet": {
+        "publishedAt": "2023-10-12T13:00:52Z",
+        "channelId": "UCoOae5nYA7VqaXzerajD0lg",
+        "title": "One of The Best Productivity Books Ever ⏳",
+        "description": "If you liked this, you might like my new book Feel-Good Productivity, check it out here! https://www.feelgoodproductivity.com.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qcvvZElS088/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qcvvZElS088/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qcvvZElS088/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ali Abdaal",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-10-12T13:00:52Z"
+      }
+    }
+  ]
+}

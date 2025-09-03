@@ -1,0 +1,862 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "q1ELiWQQiUILa-vZvTxddJKmyQg",
+  "nextPageToken": "CBkQAA",
+  "regionCode": "CA",
+  "pageInfo": {
+    "totalResults": 1000000,
+    "resultsPerPage": 25
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Vct-CiyxfmvV58lAgSFe8HqCAlY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Ab3mkNFdujs"
+      },
+      "snippet": {
+        "publishedAt": "2023-11-20T22:36:11Z",
+        "channelId": "UCBDWmpOas4NJMj2ugGKRCzw",
+        "title": "Watch this if YOU’RE SCARED to TRAVEL ALONE 😖",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Ab3mkNFdujs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Ab3mkNFdujs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Ab3mkNFdujs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "findingfiona",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-11-20T22:36:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4-q4i3Jxhwm8NlKKtFnYrjXkPM0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8VKnI2h6180"
+      },
+      "snippet": {
+        "publishedAt": "2024-10-17T21:18:17Z",
+        "channelId": "UCPk2s5c4R_d-EUUNvFFODoA",
+        "title": "Airport Travel Hacks",
+        "description": "The ultimate study tool: https://www.goharsguide.com/notion I'll edit your college essay: https://nextadmit.com/services/essay/ ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8VKnI2h6180/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8VKnI2h6180/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8VKnI2h6180/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Gohar Khan",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-10-17T21:18:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7JYfdARCOl3LR6e_hcThftVKFiw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "y2Pko5WzdfU"
+      },
+      "snippet": {
+        "publishedAt": "2025-06-07T16:35:32Z",
+        "channelId": "UC3B5F11oEtOwI-jXpwT0kHg",
+        "title": "What it REALLY costs to solo travel NYC for a day 💸🔥",
+        "description": "NewYorkCity #SoloTravel #TravelVlog #BudgetTravel #NYCFood #TravelTips #NYCThingsToDo #DayInTheLife ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/y2Pko5WzdfU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/y2Pko5WzdfU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/y2Pko5WzdfU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Noah Anderson",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-06-07T16:35:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "pw78EBEYcqoNn3rinj8s4L9k5Gg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "vdEzN028FlM"
+      },
+      "snippet": {
+        "publishedAt": "2025-05-30T22:58:35Z",
+        "channelId": "UC9koj0_2NqmEiGwt8USCidg",
+        "title": "Would you use this for your travels?😱 #travel #suitcase #packing #packingforvacation",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vdEzN028FlM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vdEzN028FlM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vdEzN028FlM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "PACKLAB",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-05-30T22:58:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KXZIl_z7himjIVCIuJSfWIM0_Tc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "B6WEnRzDcOc"
+      },
+      "snippet": {
+        "publishedAt": "2024-09-07T17:35:11Z",
+        "channelId": "UCKaWD4ZM7ixlot6ysBVKP_g",
+        "title": "10 AMAZING Travel Finds  #shorts #travel #justicebuys",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/B6WEnRzDcOc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/B6WEnRzDcOc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/B6WEnRzDcOc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Justice Buys",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-09-07T17:35:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_2QLh1qHuMI3t2ePa8GwL8kMpZQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "B2UOucuMlyg"
+      },
+      "snippet": {
+        "publishedAt": "2024-08-28T17:24:56Z",
+        "channelId": "UCuO2u-G7vQsdXoMAXWJ0Eiw",
+        "title": "Luggage weight back ✈️ #travel #luggage  #travelhacks #airport #traveling",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/B2UOucuMlyg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/B2UOucuMlyg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/B2UOucuMlyg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Zore & Tomek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-08-28T17:24:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Krk8kHscVvTj9V-2o-IAgLF0sq8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sf3PiPKlC8M"
+      },
+      "snippet": {
+        "publishedAt": "2025-03-29T15:30:30Z",
+        "channelId": "UCDQ0pYBbR3rGWnn-BZJ9lXA",
+        "title": "25 Best Places To Visit In Caribbean Islands 2025 | Travel Video",
+        "description": "25 Best Places To Visit In Caribbean Islands 2025 | Travel Video #caribbean #caribbeanislands #travel #bestplacestovisit ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sf3PiPKlC8M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sf3PiPKlC8M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sf3PiPKlC8M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Scenic Hunter",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-03-29T15:30:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YWqRPvTLC7DMOL4DCCVhZjsVqPs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OHm5Mjfp0l0"
+      },
+      "snippet": {
+        "publishedAt": "2025-05-04T23:33:17Z",
+        "channelId": "UCW2kJmdHC5TOAKArs-1wQ6Q",
+        "title": "Every female traveler needs this travel backpack 😍 #travel #vacation #traveler",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OHm5Mjfp0l0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OHm5Mjfp0l0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OHm5Mjfp0l0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Easy Pack",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-05-04T23:33:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "C6UL9p8xvj6USvldBB9ek4gtjVo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wyBE_Sg7bkw"
+      },
+      "snippet": {
+        "publishedAt": "2024-10-23T18:25:03Z",
+        "channelId": "UCmuKbV48J98v6nF2p6lNoMA",
+        "title": "5 travel essentials that are actually worth your money! #travel #travelessentials",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wyBE_Sg7bkw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wyBE_Sg7bkw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wyBE_Sg7bkw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Marissa Ellsworth",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-10-23T18:25:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Op3OPv8iqBnKHq_sQqR8aQz8NHo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "hwdc4xDBKHM"
+      },
+      "snippet": {
+        "publishedAt": "2025-08-30T01:00:52Z",
+        "channelId": "UCxCX9NWR6sWKOhARHwJ4vlQ",
+        "title": "Day in the life of an American traveling to Shenzhen 🛍️ #sponsored #UpperHills",
+        "description": "Today we explored Shenzhen's famous UpperHills newly opened Shenzhen Downtown Duty Free Shop. We had so much fun ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hwdc4xDBKHM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hwdc4xDBKHM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hwdc4xDBKHM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "marissainchina",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-08-30T01:00:52Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "OAa5cXgn3xvs67xP9WiJrh3BZQs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HDDpg-WGUn4"
+      },
+      "snippet": {
+        "publishedAt": "2024-10-06T15:00:21Z",
+        "channelId": "UClDHklFpCTrQ6p6EJFHIl4g",
+        "title": "How to Spend 5 Days in AMALFI Coast | Travel Itinerary",
+        "description": "In this video, I'll be sharing my ultimate 5-day Amalfi Coast itinerary, filled with top tips and must-see spots to help you have an ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HDDpg-WGUn4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HDDpg-WGUn4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HDDpg-WGUn4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Exotic Vacation",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-10-06T15:00:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CLBFiyBa-TE9qMPfdS7xN6pPoY4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ycIMa8ApWx8"
+      },
+      "snippet": {
+        "publishedAt": "2025-08-29T11:01:49Z",
+        "channelId": "UCF9YTReKx7OGNfsxeCNNjUw",
+        "title": "$0.50 Rice and Curry 🍛 #streetfood #travel",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ycIMa8ApWx8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ycIMa8ApWx8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ycIMa8ApWx8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Hugh Abroad Shorts",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-08-29T11:01:49Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "upJrxmbIFZtCpNbf6pvwH-mAHaQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "KndrdfgmkZo"
+      },
+      "snippet": {
+        "publishedAt": "2025-08-25T14:14:29Z",
+        "channelId": "UCrscnpMfXgPVc3T_x1jvRng",
+        "title": "$20 Japanese Street Food Challenge! 🇯🇵🐙",
+        "description": "Everything I ate ate for $20 at Dotonbori Market in Japan! #foodie #japanesefood #streetfood #travel #shorts.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KndrdfgmkZo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KndrdfgmkZo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KndrdfgmkZo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Josh Slavin",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-08-25T14:14:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "VQxYiZThCkiRtnRDuS-0qL07WEg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YiQvN3O3MD8"
+      },
+      "snippet": {
+        "publishedAt": "2025-04-30T08:34:00Z",
+        "channelId": "UCeilKqxzYOt_Ao3hIvSZnYA",
+        "title": "$1 slippers in Philippines 🇵🇭 #travel",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YiQvN3O3MD8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YiQvN3O3MD8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YiQvN3O3MD8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "native ty food",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-04-30T08:34:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GdQ6hudgmIVns78O6bN6K7TLfZ0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "WK5lO8CcvCM"
+      },
+      "snippet": {
+        "publishedAt": "2023-12-16T20:54:47Z",
+        "channelId": "UCEZKpVw6ldXNVU4Ua6IFwTw",
+        "title": "The Best Travel Hacks You Will Hear in 2025",
+        "description": "These are 33 of the best travel hacks with tips and tricks for the airplane in 2025. I also show you hacks for a carry-on suitcase.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WK5lO8CcvCM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WK5lO8CcvCM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WK5lO8CcvCM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Travel Tips by Laurie",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-12-16T20:54:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "x25qljU_-ZzA-aO8jwu1lNboEc8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4ehNo4zhwkQ"
+      },
+      "snippet": {
+        "publishedAt": "2025-08-02T12:30:06Z",
+        "channelId": "UCXw1ddyrUmib3zmCmvSI1ow",
+        "title": "$100 Thailand Street Food Challenge!! Budget Bombshell!!",
+        "description": "If you're ever injured, you can check out Morgan & Morgan. You can start your claim in just a click without having to leave your ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4ehNo4zhwkQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4ehNo4zhwkQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4ehNo4zhwkQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "More Best Ever Food Review Show",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-08-02T12:30:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3F7szaIupQ8P4OkwViijc2S8Bh4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "VeXykneo8qw"
+      },
+      "snippet": {
+        "publishedAt": "2025-05-27T22:43:53Z",
+        "channelId": "UCW2kJmdHC5TOAKArs-1wQ6Q",
+        "title": "It feels illegal to know about this travel backpack 🤭💗 #travel #travelhacks #airline",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VeXykneo8qw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VeXykneo8qw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VeXykneo8qw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Easy Pack",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-05-27T22:43:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "BnDRYr7WxbHuHdHXCTNe-oRc0gU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wIZVYzFVvqE"
+      },
+      "snippet": {
+        "publishedAt": "2023-11-22T20:30:05Z",
+        "channelId": "UC50xPFPma-nCS5GZpAFukpQ",
+        "title": "Flying First Class to Every Continent in 7 days",
+        "description": "Try out https://www.magictravel.ai/?r=trektrendy for planning your next trip with AI for free! Today I'm flying to all seven continents ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wIZVYzFVvqE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wIZVYzFVvqE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wIZVYzFVvqE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Trek Trendy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-11-22T20:30:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "DOPiAi9URUWHi5rZIecjEZc836A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "5uQJSh9Tozg"
+      },
+      "snippet": {
+        "publishedAt": "2025-08-22T08:25:25Z",
+        "channelId": "UCnwm1TTH0yTkqu20LyaAsQg",
+        "title": "Best thing I found for travel girlies! #aakritirana #travel #tent #ladakh #amazonfinds",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5uQJSh9Tozg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5uQJSh9Tozg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5uQJSh9Tozg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Aakriti Rana",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-08-22T08:25:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "pIKtT8thzCc0RaQNIjxsREqb4dg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "EOg3GFC8dkU"
+      },
+      "snippet": {
+        "publishedAt": "2025-08-22T16:00:07Z",
+        "channelId": "UCds9ox_aTIGDCpB6rODmS7w",
+        "title": "I Try An Adults ONLY Luxury Cruise!",
+        "description": "Capture travel memories in a whole new way with the NEW Insta360 X5 camera, a game-changer for levelling up your travel ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/EOg3GFC8dkU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/EOg3GFC8dkU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/EOg3GFC8dkU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Walk With Me Tim",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-08-22T16:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "iCEzaqA77KUFwUBdpo51yXyA9oI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "BEkdhf3zua0"
+      },
+      "snippet": {
+        "publishedAt": "2024-03-30T15:00:08Z",
+        "channelId": "UCnmGIkw-KdI0W5siakKPKog",
+        "title": "I Tried Airport Sleep Pods",
+        "description": "i need a nap sign up for JOYRIDE updates: https://www.joyridesweets.com follow us on IG @joyridesweets :)",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BEkdhf3zua0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BEkdhf3zua0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BEkdhf3zua0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ryan Trahan",
+        "liveBroadcastContent": "none",
+        "publishTime": "2024-03-30T15:00:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "sINoFsxqGbLXUDJlu9pX_UuBGJE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ILJweZ2IBT8"
+      },
+      "snippet": {
+        "publishedAt": "2025-08-22T21:30:03Z",
+        "channelId": "UCCZL92wcAg1jaivtYjb_mpA",
+        "title": "15 Premium Travel Essentials That Change Everything (2025)",
+        "description": "Ready to travel smarter, lighter, and stop wasting money on bad gear? Join 500+ travelers who've already signed up for the ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ILJweZ2IBT8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ILJweZ2IBT8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ILJweZ2IBT8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Gear Up Your Life ",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-08-22T21:30:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cx1KB1Mkw9EBQ37gvgQ0HFzMEco",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "yG3YJwoffUI"
+      },
+      "snippet": {
+        "publishedAt": "2025-05-11T12:07:06Z",
+        "channelId": "UCEZKpVw6ldXNVU4Ua6IFwTw",
+        "title": "5 Long Flight Tips Essential for Your International Travel in 2025",
+        "description": "5 travel tip steps for long flights in 2025 packing the needed essentials and being prepared. #longflight #traveltips #travelhacks ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yG3YJwoffUI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yG3YJwoffUI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yG3YJwoffUI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Travel Tips by Laurie",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-05-11T12:07:06Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Hs_3cCSS_54cgCGIqOHUn8eJchU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "0bEaG99umD0"
+      },
+      "snippet": {
+        "publishedAt": "2025-04-20T10:00:11Z",
+        "channelId": "UCMhDk2qIKoE7bVht4GeQ8Lg",
+        "title": "48 Hours Eating My Way Through Historic Boston 🇺🇸 USA Travel Guide",
+        "description": "Holy Cannoli! It's my first time ever in Boston, and this 48-hour adventure is packed with iconic eats, rich history, and charming ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/0bEaG99umD0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/0bEaG99umD0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/0bEaG99umD0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Travel For Phoebe",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-04-20T10:00:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "RoIxJsXHZjwqDMNFj-KFJIZkXQI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "rJKDBW0reoM"
+      },
+      "snippet": {
+        "publishedAt": "2025-03-22T17:00:06Z",
+        "channelId": "UCDa5_HJ3qPkDtbRmdlqBD3g",
+        "title": "🇨🇭Riding on $800 Switzerland&#39;s Most Luxury Train! | The Glacier Express Excellence Class",
+        "description": "The Glacier Express, Excellence Class (Zermatt→St. Moritz) ◇I'm a Japanese train enthusiast and traveled in Europe in the ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rJKDBW0reoM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rJKDBW0reoM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rJKDBW0reoM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Kuga's Travel",
+        "liveBroadcastContent": "none",
+        "publishTime": "2025-03-22T17:00:06Z"
+      }
+    }
+  ]
+}

@@ -5,11 +5,10 @@ import { SectionCardsProps } from "./section-cards.types";
 
 export default function SectionCards({
   title,
-  videos,
+  videos = [],
   size = "medium",
 }: SectionCardsProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
-  console.log("size: ", size);
 
   useEffect(() => {
     const el = scrollRef.current;

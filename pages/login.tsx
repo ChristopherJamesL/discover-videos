@@ -1,17 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import styles from "@/styles/Login.module.css";
 
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [userMsg, setUserMsg] = useState("");
+
+  const router = useRouter();
+
   const handleLoginWithEmail = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    console.log("login button clicked");
+
+    const cleanedEmail = email.trim();
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanedEmail);
+
+    if (isValidEmail) {
+      if (email === "1@gmail.com") {
+        setUserMsg("");
+        router.push("/");
+        return console.log("Success, Route to dashboard");
+      } else {
+        setUserMsg("");
+        return console.log("Incorrect credentials");
+      }
+    } else {
+      setUserMsg("Enter a valid email address");
+      return console.log("Incorrect email format");
+    }
   };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const change = e.target.value;
-    console.log(change);
+    setUserMsg("");
+    const email = e.target.value;
+    setEmail(email);
+    console.log(email);
   };
 
   return (
@@ -42,7 +67,7 @@ export default function Login() {
             className={styles.emailInput}
             onChange={handleChange}
           ></input>
-          <p className={styles.userMsg}>Enter a valid email address</p>
+          <p className={styles.userMsg}>{userMsg}</p>
           <button onClick={handleLoginWithEmail} className={styles.loginBtn}>
             Sign In
           </button>

@@ -4,14 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "@/styles/Login.module.css";
+import { getMagic } from "@/lib/magic-client";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [userMsg, setUserMsg] = useState("");
 
   const router = useRouter();
+  const magic = getMagic();
 
-  const handleLoginWithEmail = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleLoginWithEmail = async (
+    e: React.MouseEvent<HTMLButtonElement>
+  ) => {
     e.preventDefault();
 
     const cleanedEmail = email.trim();
@@ -19,8 +23,17 @@ export default function Login() {
 
     if (isValidEmail) {
       if (email === "1@gmail.com") {
-        setUserMsg("");
-        router.push("/");
+        try {
+          const didToken = await magic.auth.loginWithMagicLink({
+            email: email,
+          });
+          console.log("Magic Auth Info: ", didToken);
+        } catch (e) {
+          // Handle errors if required!
+          console.error("Something went wrong logging in", e);
+        }
+        // setUserMsg("");
+        // router.push("/");
         return console.log("Success, Route to dashboard");
       } else {
         setUserMsg("");

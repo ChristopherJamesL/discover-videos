@@ -3,8 +3,8 @@ import Banner from "@/components/banner/banner";
 import Navbar from "@/components/navbar/navbar";
 import SectionCards from "@/components/card/section-cards";
 import { getVideos } from "@/lib/videos";
-import styles from "@/styles/Home.module.css";
 import { HomeProps } from "./index.types";
+import styles from "@/styles/Home.module.css";
 
 export async function getServerSideProps() {
   const disneyVideos = await getVideos("disney");

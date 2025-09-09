@@ -1,13 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import { NavbarProps } from "./navbar.types";
 import styles from "@/components/navbar/navbar.module.css";
 
-export default function Navbar({ username }: NavbarProps) {
+export default function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [username, setUsername] = useState("Sign In");
   const router = useRouter();
+
+  useEffect(() => {
+    async function getUsername() {
+      const { getMagic } = await import("@/lib/magic-client");
+      const magic = getMagic();
+      try {
+        const { email } = await magic.user.getInfo();
+        console.log("user info: ", email);
+        if (email) setUsername(email);
+      } catch (e) {
+        console.error(`Error getting user info`, e);
+      }
+    }
+    getUsername();
+  }, []);
 
   const handleClickHome = (e: React.MouseEvent<HTMLLIElement>) => {
     e.preventDefault();

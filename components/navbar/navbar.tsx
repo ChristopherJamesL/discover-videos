@@ -1,20 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
+import type { Magic } from "magic-sdk";
 import styles from "@/components/navbar/navbar.module.css";
 
 export default function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [username, setUsername] = useState("Sign In");
+  const [username, setUsername] = useState("");
+  const magic = useRef<Magic | null>(null);
   const router = useRouter();
 
   useEffect(() => {
     async function getUsername() {
       const { getMagic } = await import("@/lib/magic-client");
-      const magic = getMagic();
+      magic.current = getMagic();
       try {
-        const { email } = await magic.user.getInfo();
+        const { email } = await magic.current.user.getInfo();
         console.log("user info: ", email);
         if (email) setUsername(email);
       } catch (e) {
@@ -23,6 +25,20 @@ export default function Navbar() {
     }
     getUsername();
   }, []);
+
+  const handleSignOut = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    try {
+      if (magic.current) {
+        await magic.current.user.logout();
+        console.log(await magic.current.user.isLoggedIn()); // => `false`
+        router.push("/login");
+      }
+    } catch (e) {
+      // Handle errors if required!
+      console.error("Error during logout", e);
+    }
+  };
 
   const handleClickHome = (e: React.MouseEvent<HTMLLIElement>) => {
     e.preventDefault();
@@ -75,7 +91,11 @@ export default function Navbar() {
             {showDropdown && (
               <div className={styles.navDropdown}>
                 <div>
-                  <Link href="/login" className={styles.linkName}>
+                  <Link
+                    href="/login"
+                    className={styles.linkName}
+                    onClick={handleSignOut}
+                  >
                     Sign Out
                   </Link>
                   <div className={styles.lineWrapper}></div>

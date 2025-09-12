@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Card from "./card";
 import styles from "./section-cards.module.css";
 import { SectionCardsProps } from "./section-cards.types";
+import Link from "next/link";
 
 export default function SectionCards({
   title,
@@ -34,19 +35,16 @@ export default function SectionCards({
         {videos.map((video, i) => {
           const {
             id,
+            title,
             thumbnails: {
               high: { url },
             },
           } = video;
           const hoverStyle = i === 0 || i === videos.length - 1 ? 1 : 2;
           return (
-            <Card
-              key={i}
-              id={id}
-              hoverStyle={hoverStyle}
-              imgUrl={url}
-              size={size}
-            />
+            <Link href={`/video/${id}`} key={i}>
+              <Card id={id} hoverStyle={hoverStyle} imgUrl={url} size={size} />
+            </Link>
           );
         })}
       </div>

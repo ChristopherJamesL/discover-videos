@@ -1,11 +1,15 @@
 import React from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import { BannerProps } from "./banner.types";
 import styles from "@/components/banner/banner.module.css";
 
-export default function Banner({ title, subTitle, imgUrl }: BannerProps) {
+export default function Banner({ title, subTitle, imgUrl, id }: BannerProps) {
+  const router = useRouter();
+
   const handlePlay = () => {
     console.log("Play");
+    router.push(`/video/${id}`);
   };
   return (
     <div className={styles.container}>

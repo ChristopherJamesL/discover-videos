@@ -12,8 +12,9 @@ const robotoSlab = Roboto_Slab({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
-  const router = useRouter();
   const [checkingAuth, setCheckingAuth] = useState(true);
+
+  const router = useRouter();
 
   useEffect(() => {
     const checkLogin = async () => {
@@ -36,9 +37,8 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   useEffect(() => {
-    const handleComplete = () => {
-      setCheckingAuth(false);
-    };
+    const handleComplete = () => setCheckingAuth(false);
+
     router.events.on("routeChangeComplete", handleComplete);
     router.events.on("routeChangeError", handleComplete);
 

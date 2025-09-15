@@ -2,15 +2,24 @@ import React from "react";
 import { useRouter } from "next/router";
 import Modal from "react-modal";
 import clsx from "classnames";
-import styles from "@/styles/Video.module.css";
-import { VideoProps } from "./video.types";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { VideoProps } from "./video.types";
+import styles from "@/styles/Video.module.css";
+import disneyvideos from "@/data/disney.videos.json";
 
 Modal.setAppElement("#__next");
 
-export const getStaticProps: GetStaticProps = async () => {
+const API_KEY = process.env.YOUTUBE_API_KEY;
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const videoId = params?.videoId;
+
+  if (!videoId || typeof videoId !== "string") return { notFound: true };
   // fetch data from API or fallback
-  // const res = await fetch();
+  const res = await fetch(
+    `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`
+  );
+  const data = res.json();
   // const videos = res.json();
   const video = {
     title: "Hi cute dog",
@@ -29,9 +38,10 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const videosList = ["hJnAHzo4-KI", "BjkIOU5PhyQ", "ETVi5_cnnaE"];
-  const paths = videosList.map((id) => ({
-    params: { id },
+  // const videosList = ["hJnAHzo4-KI", "BjkIOU5PhyQ", "ETVi5_cnnaE"];
+  const videosList = disneyvideos.items;
+  const paths = videosList.map((videos) => ({
+    params: { videoId: videos.id.videoId },
   }));
   return {
     paths,

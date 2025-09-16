@@ -19,4 +19,5 @@ export type VideosType = {
   };
   channelTitle: string;
   publishTime: string;
+  viewCount?: number;
 };

@@ -5,6 +5,8 @@ import productivityFallback from "@/data/productivity.videos.json";
 import popularFallback from "@/data/popular.videos.json";
 import { VideosType } from "@/components/card/section-cards.types";
 
+const API_KEY = process.env.YOUTUBE_API_KEY;
+
 const fallbackMap: Record<string, YoutubeVideoResponse> = {
   disney: disneyFallback,
   travel: travelFallback,
@@ -12,16 +14,20 @@ const fallbackMap: Record<string, YoutubeVideoResponse> = {
   popular: popularFallback,
 };
 
-export const getVideos = async (searchQuery: string) => {
+export const getVideos = async (searchQuery: string, urlOverride?: string) => {
   const API_KEY = process.env.YOUTUBE_API_KEY;
   const BASE_URL = `https://youtube.googleapis.com/youtube/v3`;
+
   const endpoint =
     searchQuery === "popular"
       ? `videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=25&regionCode=US`
       : `search?part=snippet&type=video&maxResults=25&q=${searchQuery}`;
+
+  // const URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=[YOUR_API_KEY]`
+  const url = urlOverride || `${BASE_URL}/${endpoint}&key=${API_KEY}`;
+
   try {
-    // https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=[YOUR_API_KEY]
-    const response = await fetch(`${BASE_URL}/${endpoint}&key=${API_KEY}`);
+    const response = await fetch(url);
 
     const videos: YoutubeVideoResponse = await response.json();
 
@@ -63,6 +69,7 @@ const filterVideos = (items: YoutubeVideoResponse["items"]): VideosType[] => {
           publishTime,
           publishedAt,
         },
+        statistics: { viewCount } = { viewCount: "0" },
       } = video;
 
       const videoId =
@@ -82,7 +89,17 @@ const filterVideos = (items: YoutubeVideoResponse["items"]): VideosType[] => {
         },
         channelTitle,
         publishTime: publishTime ?? publishedAt,
+        viewCount: parseInt(viewCount ?? "0"),
       };
     })
     .filter(Boolean) as VideosType[];
+};
+
+export const getYoutubeVideoById = async (
+  videoId: string
+): Promise<VideosType | undefined> => {
+  const URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`;
+
+  const results = await getVideos("videoById", URL);
+  return results[0];
 };

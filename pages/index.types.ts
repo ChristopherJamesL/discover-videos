@@ -43,4 +43,7 @@ export interface YoutubeVideoItem {
     channelTitle: string;
     publishTime?: string;
   };
+  statistics?: {
+    viewCount?: string;
+  };
 }

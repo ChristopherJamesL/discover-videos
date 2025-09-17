@@ -1,5 +1,5 @@
 export interface CardProps {
-  id?: string | undefined;
+  id?: string | { videoId: string };
   imgUrl: string;
   size: CardSize;
   hoverStyle: number;

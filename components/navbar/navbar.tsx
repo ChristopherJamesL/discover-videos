@@ -17,7 +17,6 @@ export default function Navbar() {
       magic.current = getMagic();
       try {
         const { email } = await magic.current.user.getInfo();
-        console.log("user info: ", email);
         if (email) setUsername(email);
       } catch (e) {
         console.error(`Error getting user info`, e);
@@ -31,11 +30,9 @@ export default function Navbar() {
     try {
       if (magic.current) {
         await magic.current.user.logout();
-        console.log(await magic.current.user.isLoggedIn()); // => `false`
         router.push("/login");
       }
     } catch (e) {
-      // Handle errors if required!
       console.error("Error during logout", e);
     }
   };

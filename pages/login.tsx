@@ -41,7 +41,6 @@ export default function Login() {
           const didToken = await magic.auth.loginWithMagicLink({
             email: email,
           });
-          console.log("Magic Auth Info: ", didToken);
           if (didToken) {
             await router.push("/");
             return;
@@ -65,7 +64,6 @@ export default function Login() {
     setUserMsg("");
     const email = e.target.value;
     setEmail(email);
-    console.log(email);
   };
 
   return (

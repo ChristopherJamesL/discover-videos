@@ -7,7 +7,7 @@ export interface SectionCardsProps {
 }
 
 export type VideosType = {
-  id: string | undefined;
+  id: string | { videoId: string };
   title: string;
   description: string;
   thumbnails: {

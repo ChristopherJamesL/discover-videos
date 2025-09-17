@@ -12,5 +12,3 @@ export const getMagic = (): Magic => {
   }
   return magic;
 };
-
-console.log("magic setup", getMagic());

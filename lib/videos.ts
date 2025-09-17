@@ -7,15 +7,14 @@ import { VideosType } from "@/components/card/section-cards.types";
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
 
-const fallbackMap: Record<string, YoutubeVideoResponse> = {
+export const fallbackMap: Record<string, YoutubeVideoResponse> = {
   disney: disneyFallback,
   travel: travelFallback,
   productivity: productivityFallback,
   popular: popularFallback,
 };
 
-export const getVideos = async (searchQuery: string, urlOverride?: string) => {
-  const API_KEY = process.env.YOUTUBE_API_KEY;
+const fetchVideos = async (searchQuery: string, urlOverride?: string) => {
   const BASE_URL = `https://youtube.googleapis.com/youtube/v3`;
 
   const endpoint =
@@ -23,13 +22,16 @@ export const getVideos = async (searchQuery: string, urlOverride?: string) => {
       ? `videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=25&regionCode=US`
       : `search?part=snippet&type=video&maxResults=25&q=${searchQuery}`;
 
-  // const URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=[YOUR_API_KEY]`
   const url = urlOverride || `${BASE_URL}/${endpoint}&key=${API_KEY}`;
 
-  try {
-    const response = await fetch(url);
+  const response = await fetch(url);
+  const videos: YoutubeVideoResponse = await response.json();
+  return videos;
+};
 
-    const videos: YoutubeVideoResponse = await response.json();
+export const getVideos = async (searchQuery: string, urlOverride?: string) => {
+  try {
+    const videos = await fetchVideos(searchQuery, urlOverride);
 
     if (!videos.items) {
       const errorReason = videos.error?.errors?.[0]?.reason;
@@ -56,7 +58,9 @@ export const getVideos = async (searchQuery: string, urlOverride?: string) => {
   }
 };
 
-const filterVideos = (items: YoutubeVideoResponse["items"]): VideosType[] => {
+export const filterVideos = (
+  items: YoutubeVideoResponse["items"]
+): VideosType[] => {
   return items
     .map((video) => {
       const {

@@ -42,7 +42,7 @@
         "publishTime": "2025-07-16T16:01:15Z"
       },
       "statistics": {
-        "viewCount": "7213793"
+        "viewCount": "7219598"
       }
     },
     {
@@ -79,7 +79,7 @@
         "publishTime": "2025-07-30T12:47:33Z"
       },
       "statistics": {
-        "viewCount": "13826264"
+        "viewCount": "13842735"
       }
     },
     {
@@ -153,7 +153,7 @@
         "publishTime": "2025-03-12T16:00:13Z"
       },
       "statistics": {
-        "viewCount": "25336790"
+        "viewCount": "25341139"
       }
     },
     {
@@ -190,7 +190,7 @@
         "publishTime": "2021-02-17T13:00:14Z"
       },
       "statistics": {
-        "viewCount": "24800316"
+        "viewCount": "24801310"
       }
     },
     {
@@ -264,7 +264,7 @@
         "publishTime": "2025-07-16T16:16:12Z"
       },
       "statistics": {
-        "viewCount": "579983"
+        "viewCount": "580345"
       }
     },
     {
@@ -301,7 +301,7 @@
         "publishTime": "2025-07-30T13:06:47Z"
       },
       "statistics": {
-        "viewCount": "1289554"
+        "viewCount": "1292473"
       }
     },
     {
@@ -375,7 +375,7 @@
         "publishTime": "2025-03-19T16:20:46Z"
       },
       "statistics": {
-        "viewCount": "797814"
+        "viewCount": "798189"
       }
     },
     {
@@ -412,7 +412,7 @@
         "publishTime": "2025-03-12T16:18:23Z"
       },
       "statistics": {
-        "viewCount": "10092759"
+        "viewCount": "10098344"
       }
     },
     {
@@ -449,7 +449,7 @@
         "publishTime": "2025-05-20T16:00:06Z"
       },
       "statistics": {
-        "viewCount": "10364183"
+        "viewCount": "10367605"
       }
     },
     {
@@ -523,7 +523,7 @@
         "publishTime": "2025-07-30T13:00:14Z"
       },
       "statistics": {
-        "viewCount": "423128"
+        "viewCount": "423852"
       }
     },
     {
@@ -560,7 +560,7 @@
         "publishTime": "2024-12-03T15:01:02Z"
       },
       "statistics": {
-        "viewCount": "21311948"
+        "viewCount": "21314739"
       }
     },
     {
@@ -634,7 +634,7 @@
         "publishTime": "2025-03-12T16:34:47Z"
       },
       "statistics": {
-        "viewCount": "1264145"
+        "viewCount": "1264693"
       }
     },
     {
@@ -671,7 +671,7 @@
         "publishTime": "2025-05-20T16:11:28Z"
       },
       "statistics": {
-        "viewCount": "1382275"
+        "viewCount": "1382810"
       }
     },
     {
@@ -708,7 +708,7 @@
         "publishTime": "2025-07-17T16:21:41Z"
       },
       "statistics": {
-        "viewCount": "238933"
+        "viewCount": "239701"
       }
     },
     {
@@ -782,7 +782,7 @@
         "publishTime": "2019-12-05T14:00:06Z"
       },
       "statistics": {
-        "viewCount": "28700447"
+        "viewCount": "28701247"
       }
     },
     {
@@ -819,7 +819,7 @@
         "publishTime": "2025-07-28T15:00:09Z"
       },
       "statistics": {
-        "viewCount": "24446617"
+        "viewCount": "24470605"
       }
     },
     {
@@ -893,7 +893,7 @@
         "publishTime": "2025-08-30T19:29:34Z"
       },
       "statistics": {
-        "viewCount": "90900"
+        "viewCount": "91518"
       }
     },
     {
@@ -930,7 +930,44 @@
         "publishTime": "2025-07-17T16:00:55Z"
       },
       "statistics": {
-        "viewCount": "9937689"
+        "viewCount": "9948440"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "custom-clifford-etag",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4zH5iYM4wJo"
+      },
+      "snippet": {
+        "publishedAt": "2021-06-29T12:59:02Z",
+        "channelId": "UCF9imwPMSGz4Vq1NiTWCC7g",
+        "title": "Clifford the Big Red Dog (2021) - Official Trailer - Paramount Pictures",
+        "description": "Heroes don’t get any bigger. Check out the new trailer for Clifford the Big Red Dog, hitting theatres and Paramount+ on November 10. #CliffordMovie\n \n🐾\n \nWhen middle-schooler Emily Elizabeth (Darby Camp) meets a magical animal rescuer (John Cleese) who gifts her a little, red puppy, she never anticipated waking up to find a giant ten-foot hound in her small New York City apartment. While her single mom (Sienna Guillory) is away for business, Emily and her fun but impulsive uncle Casey (Jack Whitehall) set out on an adventure that will keep you on the edge-of-your-seat as our heroes take a bite out of the Big Apple. Based on the beloved Scholastic book character, Clifford will teach the world how to love big!\n  \n🐾\n \nFollow Clifford the Big Red Dog on Facebook, Twitter, and Instagram @CliffordMovie\n \n🐾",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4zH5iYM4wJo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4zH5iYM4wJo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4zH5iYM4wJo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Paramount Pictures",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-06-29T12:59:02Z"
+      },
+      "statistics": {
+        "viewCount": "14559554"
       }
     }
   ]

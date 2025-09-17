@@ -1,22 +1,64 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import Modal from "react-modal";
 import clsx from "classnames";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { VideoProps } from "./video.types";
+import { FallbackVideo, VideoProps } from "./video.types";
+import { getVideos, getYoutubeVideoById, fallbackMap } from "@/lib/videos";
+import {
+  normalizeFallbackVideo,
+  normalizeFallbackVideos,
+} from "./video-fallback-normalize";
 import styles from "@/styles/Video.module.css";
+
 import disneyvideos from "@/data/disney.videos.json";
-import { getYoutubeVideoById } from "@/lib/videos";
+import popularvideos from "@/data/popular.videos.json";
+import productivityvideos from "@/data/productivity.videos.json";
+import travelvideos from "@/data/travel.videos.json";
+import { VideosType } from "@/components/card/section-cards.types";
+import Navbar from "@/components/navbar/navbar";
 
 Modal.setAppElement("#__next");
 
-const API_KEY = process.env.YOUTUBE_API_KEY;
+const categories = ["disney", "popular", "productivity", "travel"] as const;
+
+const allFallbacks: FallbackVideo[] = [
+  ...disneyvideos.items,
+  ...popularvideos.items,
+  ...productivityvideos.items,
+  ...travelvideos.items,
+];
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const videosList = disneyvideos.items;
-  const paths = videosList.map((videos) => ({
-    params: { videoId: videos.id.videoId },
-  }));
+  let allVideos: VideosType[] = [];
+
+  for (const category of categories) {
+    try {
+      const videos = await getVideos(category);
+      if (videos.length) {
+        allVideos = allVideos.concat(videos);
+      } else {
+        console.warn(
+          `No videos from API for category ${category}, using fallback`
+        );
+        allVideos = allVideos.concat(
+          normalizeFallbackVideos(fallbackMap[category].items)
+        );
+      }
+    } catch (e) {
+      console.warn(
+        `API fetch failed for category ${category}, using fallback.`
+      );
+      allVideos = allVideos.concat(
+        normalizeFallbackVideos(fallbackMap[category].items)
+      );
+    }
+  }
+
+  const paths = allVideos.map((video) => {
+    const videoId = typeof video.id === "string" ? video.id : video.id.videoId;
+    return { params: { videoId } };
+  });
   return {
     paths,
     fallback: "blocking",
@@ -27,10 +69,22 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const videoId = params?.videoId;
   if (!videoId || Array.isArray(videoId)) return { notFound: true };
 
-  const video = await getYoutubeVideoById(videoId);
-  console.log("PARAMS: ", params);
+  let video = await getYoutubeVideoById(videoId);
 
-  if (!video) return { notFound: true };
+  if (!video) {
+    const fallbackVideo = allFallbacks.find((video) => {
+      const id = typeof video.id === "string" ? video.id : video.id.videoId;
+      return id === videoId;
+    });
+
+    if (fallbackVideo) {
+      video = normalizeFallbackVideo(fallbackVideo);
+    }
+  }
+
+  if (!video) {
+    return { notFound: true };
+  }
 
   return {
     props: {
@@ -43,6 +97,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export default function Video({ video }: VideoProps) {
   const router = useRouter();
   const { videoId } = router.query;
+  const isValidVideoId =
+    typeof videoId === "string" && videoId.trim().length > 0;
 
   const { title, publishTime, description, channelTitle, viewCount } = video;
 
@@ -70,42 +126,45 @@ export default function Video({ video }: VideoProps) {
 
   return (
     <div className={styles.container}>
-      <Modal
-        className={styles.modal}
-        isOpen={true}
-        contentLabel="Watch the video"
-        onRequestClose={closeModal}
-        overlayClassName={styles.overlay}
-      >
-        <iframe
-          id="player"
-          className={clsx(styles.videoPlayer, styles.borderBoxShadow)}
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=0&origin=${origin}&controls=0&autoplay=1$`}
-          allowFullScreen
-          allow="autoplay; fullscreen"
-        ></iframe>
-        <div className={styles.modalBody}>
-          <div className={styles.modalBodyContent}>
-            <div className={styles.col1}>
-              <p className={styles.publishTime}>{modifiedPublishTime}</p>
-              <p className={styles.title}>{title}</p>
-              <p className={styles.description}>{description}</p>
-            </div>
-            <div className={styles.col2}>
-              <p className={clsx(styles.subText, styles.subTextWrapper)}>
-                <span className={styles.textColor}>Cast: </span>
-                <span className={styles.channelTitle}>{channelTitle}</span>
-              </p>
-              <p className={clsx(styles.subText, styles.subTextWrapper)}>
-                <span className={styles.textColor}>View Count: </span>
-                <span className={styles.channelTitle}>
-                  {viewCount?.toLocaleString()}
-                </span>
-              </p>
+      <Navbar />
+      {isValidVideoId && (
+        <Modal
+          className={styles.modal}
+          isOpen={true}
+          contentLabel="Watch the video"
+          onRequestClose={closeModal}
+          overlayClassName={styles.overlay}
+        >
+          <iframe
+            id="player"
+            className={clsx(styles.videoPlayer, styles.borderBoxShadow)}
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=0&origin=${origin}&controls=0&autoplay=1$`}
+            allowFullScreen
+            allow="autoplay; fullscreen"
+          ></iframe>
+          <div className={styles.modalBody}>
+            <div className={styles.modalBodyContent}>
+              <div className={styles.col1}>
+                <p className={styles.publishTime}>{modifiedPublishTime}</p>
+                <p className={styles.title}>{title}</p>
+                <p className={styles.description}>{description}</p>
+              </div>
+              <div className={styles.col2}>
+                <p className={clsx(styles.subText, styles.subTextWrapper)}>
+                  <span className={styles.textColor}>Cast: </span>
+                  <span className={styles.channelTitle}>{channelTitle}</span>
+                </p>
+                <p className={clsx(styles.subText, styles.subTextWrapper)}>
+                  <span className={styles.textColor}>View Count: </span>
+                  <span className={styles.channelTitle}>
+                    {viewCount?.toLocaleString()}
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </Modal>
+        </Modal>
+      )}
     </div>
   );
 }

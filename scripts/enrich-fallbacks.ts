@@ -45,7 +45,7 @@ async function fetchViewCount(videoId: string): Promise<number | null> {
 
 async function enrichFallbackFile(filename: string) {
   const filePath = path.join(dataDir, filename);
-
+  const bannerVideoId = [];
   console.log(`Processing ${filename}...`);
 
   try {
@@ -59,6 +59,10 @@ async function enrichFallbackFile(filename: string) {
         videoId = video.id;
       } else if (typeof video.id === "object" && video.id.videoId) {
         videoId = video.id.videoId;
+      }
+
+      if (videoId === "4zH5iYM4wJo") {
+        bannerVideoId.push(videoId);
       }
 
       if (!videoId) {
@@ -78,6 +82,7 @@ async function enrichFallbackFile(filename: string) {
     }
     await fs.writeFile(filePath, JSON.stringify(jsonData, null, 2));
     console.log(`Finished enriching ${filename}`);
+    console.log("Banner video Id found or not: ", bannerVideoId);
   } catch (e) {
     console.error(`Error processing file ${filename}: `, e);
   }

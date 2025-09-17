@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "enrich-fallbacks": "ts-node scripts/enrich-fallbacks.ts"
   },
   "dependencies": {
     "classnames": "^2.5.1",
+    "dotenv": "^17.2.2",
     "magic-sdk": "^30.0.0",
     "motion": "^12.23.12",
     "next": "15.5.0",
@@ -25,6 +27,7 @@
     "@types/react-modal": "^3.16.3",
     "eslint": "^9",
     "eslint-config-next": "15.5.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }

@@ -12,40 +12,7 @@ Modal.setAppElement("#__next");
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  //
-  // const videoId = params?.videoId;
-
-  // if (!videoId || typeof videoId !== "string") return { notFound: true };
-  // fetch data from API or fallback
-  // const res = await fetch(
-  //   `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`
-  // );
-  // const data = res.json();
-  // const videos = res.json();
-  const videoId = "4zH5iYM4wJo";
-  const video = await getYoutubeVideoById(videoId);
-  console.log("Video: ", video);
-
-  // const video = {
-  //   title: "Hi cute dog",
-  //   publishTime: "2021-01-01",
-  //   description: "A big red dog that is super cute, can he get any bigger?",
-  //   channelTitle: "Paramount Pictures",
-  //   viewCount: 10000,
-  // };
-  if (!video) return { notFound: true };
-
-  return {
-    props: {
-      video,
-    },
-    revalidate: 10,
-  };
-};
-
 export const getStaticPaths: GetStaticPaths = async () => {
-  // const videosList = ["hJnAHzo4-KI", "BjkIOU5PhyQ", "ETVi5_cnnaE"];
   const videosList = disneyvideos.items;
   const paths = videosList.map((videos) => ({
     params: { videoId: videos.id.videoId },
@@ -56,11 +23,37 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const videoId = params?.videoId;
+  if (!videoId || Array.isArray(videoId)) return { notFound: true };
+
+  const video = await getYoutubeVideoById(videoId);
+  console.log("PARAMS: ", params);
+
+  if (!video) return { notFound: true };
+
+  return {
+    props: {
+      video,
+    },
+    revalidate: 10,
+  };
+};
+
 export default function Video({ video }: VideoProps) {
   const router = useRouter();
   const { videoId } = router.query;
 
   const { title, publishTime, description, channelTitle, viewCount } = video;
+
+  const modifiedPublishTime = new Date(publishTime).toLocaleDateString(
+    "en-US",
+    {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }
+  );
 
   const closeModal = () => {
     if (window.history.length > 1) {
@@ -94,7 +87,7 @@ export default function Video({ video }: VideoProps) {
         <div className={styles.modalBody}>
           <div className={styles.modalBodyContent}>
             <div className={styles.col1}>
-              <p className={styles.publishTime}>{publishTime}</p>
+              <p className={styles.publishTime}>{modifiedPublishTime}</p>
               <p className={styles.title}>{title}</p>
               <p className={styles.description}>{description}</p>
             </div>

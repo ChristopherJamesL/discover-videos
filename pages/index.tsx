@@ -3,6 +3,7 @@ import Banner from "@/components/banner/banner";
 import Navbar from "@/components/navbar/navbar";
 import SectionCards from "@/components/card/section-cards";
 import { getVideos } from "@/lib/videos";
+import { startFetchMyQuery } from "@/lib/db/hasura";
 import { HomeProps } from "./index.types";
 import styles from "@/styles/Home.module.css";
 
@@ -23,6 +24,8 @@ export default function Home({
   productivityVideos,
   popularVideos,
 }: HomeProps) {
+  startFetchMyQuery();
+
   return (
     <div className={styles.container}>
       <Head>

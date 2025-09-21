@@ -1,12 +1,12 @@
 import { GraphQLResponse } from "./hasura.types";
 
-async function fetchGraphQL<T>(
+export async function fetchGraphQL<T>(
   operationsDoc: string,
   operationName: string,
   variables?: Record<string, unknown>
 ): Promise<GraphQLResponse<T>> {
   const endpoint = process.env.NEXT_PUBLIC_HASURA_ENDPOINT;
-  const secret = process.env.HASURA_ADMIN_SECRET;
+  const secret = process.env.NEXT_PUBLIC_HASURA_ADMIN_SECRET;
   if (!endpoint || !secret)
     throw new Error(
       "Missing required hasura environment endpoint or secret variable"
@@ -28,28 +28,15 @@ async function fetchGraphQL<T>(
   return await result.json();
 }
 
-const operationsDoc = `
-  query MyQuery {
-    users {
-      id
-      email
-      issuer
-    }
-  }
-`;
-
 function fetchMyQuery() {
+  const operationsDoc = `
+    query MyQuery {
+      users {
+        id
+        email
+        issuer
+      }
+    }
+  `;
   return fetchGraphQL(operationsDoc, "MyQuery", {});
-}
-
-export async function startFetchMyQuery() {
-  const { errors, data } = await fetchMyQuery();
-
-  if (errors) {
-    // handle those errors like a pro
-    console.error(errors);
-  }
-
-  // do something great with this precious data
-  console.log(data);
 }

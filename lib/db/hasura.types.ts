@@ -9,3 +9,11 @@ type GraphQLErrors = {
   path?: (string | number)[];
   extensions?: Record<string, unknown>;
 };
+
+export type UsersQueryResponse = {
+  users: {
+    id: string;
+    email: string;
+    issuer: string;
+  }[];
+};

@@ -16,7 +16,10 @@ export default function Navbar() {
       const { getMagic } = await import("@/lib/magic-client");
       magic.current = getMagic();
       try {
-        const { email } = await magic.current.user.getInfo();
+        const { email, issuer } = await magic.current.user.getInfo();
+        const didToken = await magic.current.user.getIdToken();
+        console.log("DID Token: ", didToken);
+
         if (email) setUsername(email);
       } catch (e) {
         console.error(`Error getting user info`, e);

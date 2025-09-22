@@ -46,7 +46,6 @@ export default function Login() {
             return;
           }
         } catch (e) {
-          // Handle errors if required!
           setUserMsg("Something went wrong logging in");
           console.error("Something went wrong logging in", e);
         }

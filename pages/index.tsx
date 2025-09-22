@@ -5,6 +5,8 @@ import SectionCards from "@/components/card/section-cards";
 import { getVideos } from "@/lib/videos";
 import { HomeProps } from "./index.types";
 import styles from "@/styles/Home.module.css";
+import { fetchMyQuery } from "@/lib/db/hasura";
+import { useEffect } from "react";
 
 export async function getServerSideProps() {
   const disneyVideos = await getVideos("disney");
@@ -23,6 +25,15 @@ export default function Home({
   productivityVideos,
   popularVideos,
 }: HomeProps) {
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetchMyQuery();
+      console.log("MY QUERY: ", response?.data?.users[0]);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>

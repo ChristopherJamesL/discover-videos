@@ -1,7 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { magicAdmin } from "@/lib/magic-server";
 import jwt from "jsonwebtoken";
-import { isNewUser } from "@/lib/db/hasura";
+import { createNewUser, isNewUser } from "@/lib/db/hasura";
+import { setTokenCookie } from "@/lib/cookie";
 
 export default async function login(req: NextApiRequest, res: NextApiResponse) {
   const jwtSecret = process.env.HASURA_GRAPHQL_JWT_SECRET_KEY;
@@ -16,12 +17,10 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
       if (didToken) {
         const metaData = await magicAdmin.users.getMetadataByToken(didToken);
         const { issuer } = metaData;
-        if (!issuer) throw new Error("Missing issuer");
+        if (!issuer || !metaData) throw new Error("Missing issuer or metaData");
 
         const token = jwt.sign(
           {
-            // "sub": "1234567890",
-            // "name": "Anky",
             ...metaData,
             iat: Math.floor(Date.now() / 1000),
             exp: Math.floor(Date.now() / 1000) + 7 * 24 * 60 * 60,
@@ -34,10 +33,15 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
           jwtSecret
         );
         console.log("Token: ", token);
-        // Check if user exists
-        const isNewUserQuery = await isNewUser(token, issuer);
 
-        return res.send({ done: true, token, isNewUserQuery });
+        const isNewUserQuery = await isNewUser(token, issuer);
+        if (isNewUserQuery) await createNewUser(token, metaData);
+
+        const tokenCookie = setTokenCookie(token);
+        console.log("Token Cookie: ", tokenCookie);
+
+        res.setHeader("Set-Cookie", tokenCookie);
+        return res.send({ done: true });
       }
       return res.status(401).json({ done: false, error: "Missing token" });
     } catch (e) {

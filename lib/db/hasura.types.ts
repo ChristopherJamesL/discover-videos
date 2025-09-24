@@ -17,3 +17,19 @@ export type UsersQueryResponse = {
     issuer: string;
   }[];
 };
+
+export type UserMutationResponse = {
+  insert_users: {
+    returning: {
+      email: string;
+      id: string;
+      issuer: string;
+    }[];
+  };
+};
+
+export interface MagicUserMetadata {
+  issuer: string | null;
+  publicAddress: string | null;
+  email: string | null;
+}

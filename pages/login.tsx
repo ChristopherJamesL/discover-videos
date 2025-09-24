@@ -33,25 +33,36 @@ export default function Login() {
     const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanedEmail);
 
     if (isValidEmail) {
-      if (email === "1@gmail.com") {
-        try {
-          setIsLoading(true);
-          const { getMagic } = await import("@/lib/magic-client");
-          const magic = getMagic();
-          const didToken = await magic.auth.loginWithMagicLink({
-            email: email,
+      try {
+        setIsLoading(true);
+        const { getMagic } = await import("@/lib/magic-client");
+        const magic = getMagic();
+        const didToken = await magic.auth.loginWithMagicLink({
+          email: email,
+        });
+        if (didToken) {
+          const response = await fetch("/api/login/login", {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${didToken}`,
+              "Content-Type": "application/json",
+            },
           });
-          if (didToken) {
+
+          const loggedResponse = await response.json();
+          if (loggedResponse.done) {
+            console.log("Logged Response: ", loggedResponse);
             await router.push("/");
-            return;
+          } else {
+            setIsLoading(false);
+            setUserMsg("Login failed.  Please try again.");
           }
-        } catch (e) {
-          setUserMsg("Something went wrong logging in");
-          console.error("Something went wrong logging in", e);
         }
-      } else {
-        setUserMsg("Incorrect credentials");
-        return console.log("Incorrect credentials");
+      } catch (e) {
+        setUserMsg("Something went wrong logging in");
+        console.error("Something went wrong logging in", e);
+      } finally {
+        setIsLoading(false);
       }
     } else {
       setUserMsg("Incorrect email format");

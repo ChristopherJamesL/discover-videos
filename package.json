@@ -12,6 +12,7 @@
   "dependencies": {
     "@magic-sdk/admin": "^2.8.0",
     "classnames": "^2.5.1",
+    "cookie": "^1.0.2",
     "dotenv": "^17.2.2",
     "jsonwebtoken": "^9.0.2",
     "magic-sdk": "^30.0.0",

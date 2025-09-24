@@ -1,4 +1,9 @@
-import { GraphQLResponse, UsersQueryResponse } from "./hasura.types";
+import {
+  GraphQLResponse,
+  UsersQueryResponse,
+  MagicUserMetadata,
+  UserMutationResponse,
+} from "./hasura.types";
 
 function getHasuraConfig() {
   const endpoint = process.env.NEXT_PUBLIC_HASURA_ENDPOINT;
@@ -58,4 +63,34 @@ export async function fetchHasuraGraphQL<T>(
   });
 
   return await result.json();
+}
+
+export async function createNewUser(
+  token: string,
+  metadata: MagicUserMetadata
+) {
+  const { issuer, email, publicAddress } = metadata;
+
+  const operationsDoc = `
+  mutation createNewUser($issuer: String!, $email: String!, $publicAddress: String!) {
+    insert_users(objects: {email: $email, issuer: $issuer, publicAddress: $publicAddress}) {
+      returning {
+        email
+        id
+        issuer
+      }
+    }
+  }
+  `;
+
+  const response = await fetchHasuraGraphQL<UserMutationResponse>(
+    operationsDoc,
+    "createNewUser",
+    token,
+    { issuer, email, publicAddress }
+  );
+  const user = response;
+  console.log({ user, metadata });
+
+  return response;
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import Modal from "react-modal";
 import clsx from "classnames";
@@ -9,7 +9,6 @@ import {
   normalizeFallbackVideo,
   normalizeFallbackVideos,
 } from "./video-fallback-normalize";
-import styles from "@/styles/Video.module.css";
 
 import disneyvideos from "@/data/disney.videos.json";
 import popularvideos from "@/data/popular.videos.json";
@@ -17,6 +16,9 @@ import productivityvideos from "@/data/productivity.videos.json";
 import travelvideos from "@/data/travel.videos.json";
 import { VideosType } from "@/components/card/section-cards.types";
 import Navbar from "@/components/navbar/navbar";
+import Like from "@/components/icons/like-icon";
+import Dislike from "@/components/icons/dislike-icon";
+import styles from "@/styles/Video.module.css";
 
 Modal.setAppElement("#__next");
 
@@ -142,6 +144,18 @@ export default function Video({ video }: VideoProps) {
             allowFullScreen
             allow="autoplay; fullscreen"
           ></iframe>
+          <div className={styles.likeDislikeBtnWrapper}>
+            <button className={styles.likeBtnWrapper}>
+              <div className={styles.btnWrapper}>
+                <Like fill="white" selected={false} />
+              </div>
+            </button>
+            <button>
+              <div className={styles.btnWrapper}>
+                <Dislike fill="white" selected={false} />
+              </div>
+            </button>
+          </div>
           <div className={styles.modalBody}>
             <div className={styles.modalBodyContent}>
               <div className={styles.col1}>

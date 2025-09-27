@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Modal from "react-modal";
 import clsx from "classnames";
@@ -97,6 +97,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export default function Video({ video }: VideoProps) {
+  const [toggleLike, setToggleLike] = useState(false);
+  const [toggleDislike, setToggleDislike] = useState(false);
+
   const router = useRouter();
   const { videoId } = router.query;
   const isValidVideoId =
@@ -119,6 +122,18 @@ export default function Video({ video }: VideoProps) {
     } else {
       router.push("/");
     }
+  };
+
+  const handleToggleLike = () => {
+    console.log("Like");
+    if (toggleDislike === true) setToggleDislike(!toggleDislike);
+    setToggleLike(!toggleLike);
+  };
+
+  const handleToggleDislike = () => {
+    console.log("Dislike");
+    if (toggleLike === true) setToggleLike(!toggleLike);
+    setToggleDislike(!toggleDislike);
   };
 
   const origin =
@@ -145,14 +160,17 @@ export default function Video({ video }: VideoProps) {
             allow="autoplay; fullscreen"
           ></iframe>
           <div className={styles.likeDislikeBtnWrapper}>
-            <button className={styles.likeBtnWrapper}>
+            <button
+              className={styles.likeBtnWrapper}
+              onClick={handleToggleLike}
+            >
               <div className={styles.btnWrapper}>
-                <Like fill="white" selected={false} />
+                <Like fill="white" selected={toggleLike} />
               </div>
             </button>
-            <button>
+            <button onClick={handleToggleDislike}>
               <div className={styles.btnWrapper}>
-                <Dislike fill="white" selected={false} />
+                <Dislike fill="white" selected={toggleDislike} />
               </div>
             </button>
           </div>

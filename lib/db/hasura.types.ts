@@ -18,6 +18,18 @@ export type UsersQueryResponse = {
   }[];
 };
 
+export type StatsQueryResponse = {
+  stats: [
+    {
+      favorited: number;
+      id: number;
+      user_id: string;
+      video_id: string;
+      watched: boolean;
+    },
+  ];
+};
+
 export type UserMutationResponse = {
   insert_users: {
     returning: {

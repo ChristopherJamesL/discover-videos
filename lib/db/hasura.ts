@@ -1,19 +1,19 @@
 import {
   GraphQLResponse,
   UsersQueryResponse,
+  StatsQueryResponse,
   MagicUserMetadata,
   UserMutationResponse,
 } from "./hasura.types";
 
 function getHasuraConfig() {
   const endpoint = process.env.NEXT_PUBLIC_HASURA_ENDPOINT;
-  const adminSecret = process.env.NEXT_PUBLIC_HASURA_ADMIN_SECRET;
 
-  if (!endpoint || !adminSecret) {
+  if (!endpoint) {
     throw new Error("Missing required HASURA environment variables.");
   }
 
-  return { endpoint, adminSecret };
+  return { endpoint };
 }
 
 export async function isNewUser(token: string, issuer: string) {
@@ -65,6 +65,59 @@ export async function fetchHasuraGraphQL<T>(
   return await result.json();
 }
 
+export async function findVideoIdByUserId(
+  token: string,
+  issuer: string,
+  videoId: string
+) {
+  const operationsDoc = `
+    query findVideoIdByUserId($user_id: String!, $video_id: String!) {
+      stats(where: {user_id: {_eq: $user_id}, video_id: {_eq: $video_id}}) {
+        favorited
+        id
+        user_id
+        video_id
+        watched
+      }
+    }
+  `;
+
+  const response = await fetchHasuraGraphQL<StatsQueryResponse>(
+    operationsDoc,
+    "findVideoIdByUserId",
+    token,
+    { video_id: videoId, user_id: issuer }
+  );
+
+  return response?.data?.stats;
+}
+
+const operationsDoc = `
+  mutation MyMutation($favorited: Int!, $user_id: String!, $watched: Boolean!, $video_id: String!) {
+    insert_stats_one(object: {favorited: $favorited, user_id: $user_id, video_id: $video_id, watched: $watched}) {
+      favorited
+      id
+      user_id
+      video_id
+      watched
+    }
+  }
+  
+  mutation MyMutation2($favorited: Int!, $user_id: String!, $video_id: String!, $watched: Boolean!) {
+    update_stats(
+      where: {user_id: {_eq: $user_id}, video_id: {_eq: $video_id}}, 
+      _set: {favorited: $favorited, watched: $watched}) {
+        returning {
+          favorited
+          id
+          user_id
+          video_id
+          watched
+        }
+      }
+    }
+  `;
+
 export async function createNewUser(
   token: string,
   metadata: MagicUserMetadata
@@ -72,15 +125,15 @@ export async function createNewUser(
   const { issuer, email, publicAddress } = metadata;
 
   const operationsDoc = `
-  mutation createNewUser($issuer: String!, $email: String!, $publicAddress: String!) {
-    insert_users(objects: {email: $email, issuer: $issuer, publicAddress: $publicAddress}) {
-      returning {
-        email
-        id
-        issuer
+    mutation createNewUser($issuer: String!, $email: String!, $publicAddress: String!) {
+      insert_users(objects: {email: $email, issuer: $issuer, publicAddress: $publicAddress}) {
+        returning {
+          email
+          id
+          issuer
+        }
       }
     }
-  }
   `;
 
   const response = await fetchHasuraGraphQL<UserMutationResponse>(

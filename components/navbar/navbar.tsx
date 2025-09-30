@@ -1,23 +1,22 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import type { Magic } from "magic-sdk";
+import { getMagic } from "@/lib/magic-client";
 import styles from "@/components/navbar/navbar.module.css";
 
 export default function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [username, setUsername] = useState("");
-  const magic = useRef<Magic | null>(null);
+
   const router = useRouter();
 
   useEffect(() => {
     async function getUsername() {
-      const { getMagic } = await import("@/lib/magic-client");
-      magic.current = getMagic();
       try {
-        const { email, issuer } = await magic.current.user.getInfo();
-        const didToken = await magic.current.user.getIdToken();
+        const magic = getMagic();
+        const { email } = await magic.user.getInfo();
+        const didToken = await magic.user.getIdToken();
         console.log("DID Token: ", didToken);
 
         if (email) setUsername(email);
@@ -31,10 +30,9 @@ export default function Navbar() {
   const handleSignOut = async (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     try {
-      if (magic.current) {
-        await magic.current.user.logout();
-        router.push("/login");
-      }
+      const magic = getMagic();
+      await magic.user.logout();
+      router.push("/login");
     } catch (e) {
       console.error("Error during logout", e);
     }
@@ -86,7 +84,6 @@ export default function Navbar() {
                 width={25}
                 height={25}
               />
-              {/* Expand more icons */}
             </button>
             {showDropdown && (
               <div className={styles.navDropdown}>

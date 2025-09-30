@@ -92,21 +92,52 @@ export async function findVideoIdByUserId(
   return response?.data?.stats;
 }
 
-const operationsDoc = `
-  mutation MyMutation($favorited: Int!, $user_id: String!, $watched: Boolean!, $video_id: String!) {
-    insert_stats_one(object: {favorited: $favorited, user_id: $user_id, video_id: $video_id, watched: $watched}) {
-      favorited
-      id
-      user_id
-      video_id
-      watched
+export async function createStats(
+  token: string,
+  issuer: string,
+  videoId: string,
+  favorited: number = 0,
+  watched: boolean = true
+) {
+  const operationsDoc = `
+    mutation createStats($favorited: Int!, $user_id: String!, $watched: Boolean!, $video_id: String!) {
+      insert_stats_one(object: {
+        favorited: $favorited, 
+        user_id: $user_id, 
+        video_id: $video_id, 
+        watched: $watched
+      }) {
+        favorited
+        id
+        user_id
+        video_id
+        watched
+      }
     }
-  }
-  
-  mutation MyMutation2($favorited: Int!, $user_id: String!, $video_id: String!, $watched: Boolean!) {
-    update_stats(
-      where: {user_id: {_eq: $user_id}, video_id: {_eq: $video_id}}, 
-      _set: {favorited: $favorited, watched: $watched}) {
+  `;
+
+  const response = await fetchHasuraGraphQL<StatsQueryResponse>(
+    operationsDoc,
+    "createStats",
+    token,
+    { favorited, user_id: issuer, video_id: videoId, watched }
+  );
+
+  return response;
+}
+
+export async function updateStats(
+  token: string,
+  issuer: string,
+  videoId: string,
+  favorited: number,
+  watched: boolean
+) {
+  const operationsDoc = `
+    mutation updateStats($favorited: Int!, $user_id: String!, $video_id: String!, $watched: Boolean!) {
+      update_stats(
+        where: {user_id: {_eq: $user_id}, video_id: {_eq: $video_id}}, 
+        _set: {favorited: $favorited, watched: $watched}) {
         returning {
           favorited
           id
@@ -117,6 +148,16 @@ const operationsDoc = `
       }
     }
   `;
+
+  const response = await fetchHasuraGraphQL<StatsQueryResponse>(
+    operationsDoc,
+    "updateStats",
+    token,
+    { favorited, user_id: issuer, video_id: videoId, watched }
+  );
+
+  return response;
+}
 
 export async function createNewUser(
   token: string,

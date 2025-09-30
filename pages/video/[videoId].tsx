@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Modal from "react-modal";
 import clsx from "classnames";
@@ -97,6 +97,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export default function Video({ video }: VideoProps) {
+  const [origin, setOrigin] = useState("");
   const [toggleLike, setToggleLike] = useState(false);
   const [toggleDislike, setToggleDislike] = useState(false);
 
@@ -124,22 +125,46 @@ export default function Video({ video }: VideoProps) {
     }
   };
 
-  const handleToggleLike = () => {
+  const runRatingService = async (favorited: number) => {
+    const response = await fetch("/api/stats/stats", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        favorited,
+        videoId,
+      }),
+    });
+
+    return response.json();
+  };
+
+  const handleToggleLike = async () => {
     console.log("Like");
     if (toggleDislike === true) setToggleDislike(!toggleDislike);
-    setToggleLike(!toggleLike);
+    const likeValue = !toggleLike;
+    setToggleLike(likeValue);
+
+    const favorited = likeValue ? 1 : 0;
+
+    const updateOrCreate = await runRatingService(favorited);
+    console.log("Data: ", updateOrCreate);
   };
 
-  const handleToggleDislike = () => {
+  const handleToggleDislike = async () => {
     console.log("Dislike");
     if (toggleLike === true) setToggleLike(!toggleLike);
-    setToggleDislike(!toggleDislike);
+    const dislikeValue = !toggleDislike;
+    setToggleDislike(dislikeValue);
+
+    const updateOrCreate = await runRatingService(0);
+    console.log("Data: ", updateOrCreate);
   };
 
-  const origin =
-    typeof window !== "undefined"
-      ? window.location.origin
-      : "https://example.com";
+  useEffect(() => {
+    if (typeof window !== "undefined") setOrigin(window.location.origin);
+  }, []);
 
   return (
     <div className={styles.container}>

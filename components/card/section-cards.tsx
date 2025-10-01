@@ -36,14 +36,23 @@ export default function SectionCards({
           const {
             id,
             title,
-            thumbnails: {
-              high: { url },
-            },
+            thumbnails,
+            // thumbnails: {
+            //   high: { url },
+            // },
           } = video;
+          const imgUrl =
+            thumbnails?.high?.url ??
+            "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1159&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
           const hoverStyle = i === 0 || i === videos.length - 1 ? 1 : 2;
           return (
             <Link href={`/video/${id}`} key={i}>
-              <Card id={id} hoverStyle={hoverStyle} imgUrl={url} size={size} />
+              <Card
+                id={id}
+                hoverStyle={hoverStyle}
+                imgUrl={imgUrl}
+                size={size}
+              />
             </Link>
           );
         })}

@@ -12,3 +12,12 @@ export const setTokenCookie = (token: string) => {
     sameSite: "lax",
   });
 };
+
+export const parseCookies = (req: { headers: { cookie?: string } }) => {
+  return cookie.parse(req.headers.cookie || "");
+};
+
+export const getTokenFromCookies = (req: { headers: { cookie?: string } }) => {
+  const cookies = parseCookies(req);
+  return cookies.token || "";
+};

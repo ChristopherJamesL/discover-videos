@@ -163,6 +163,29 @@ export default function Video({ video }: VideoProps) {
   };
 
   useEffect(() => {
+    async function getStats() {
+      const stats = await fetch(`/api/stats/stats?videoId=${videoId}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+
+      const response = await stats.json();
+      const { favorited, watched } = response.findVideoId[0];
+
+      if (favorited) {
+        setToggleLike(favorited);
+      } else {
+        setToggleDislike(true);
+      }
+    }
+
+    getStats();
+  }, [videoId]);
+
+  useEffect(() => {
     if (typeof window !== "undefined") setOrigin(window.location.origin);
   }, []);
 

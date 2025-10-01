@@ -4,6 +4,7 @@ import travelFallback from "@/data/travel.videos.json";
 import productivityFallback from "@/data/productivity.videos.json";
 import popularFallback from "@/data/popular.videos.json";
 import { VideosType } from "@/components/card/section-cards.types";
+import { getWatchedVideos } from "./db/hasura";
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
 
@@ -106,4 +107,13 @@ export const getYoutubeVideoById = async (
 
   const results = await getVideos("videoById", URL);
   return results[0];
+};
+
+export const getWatchItAgainVideos = async (token: string, userId: string) => {
+  const videos = await getWatchedVideos(token, userId);
+  return videos?.data?.stats?.map((video) => {
+    return {
+      id: video.video_id,
+    };
+  });
 };

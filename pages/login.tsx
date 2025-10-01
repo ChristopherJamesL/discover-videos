@@ -40,6 +40,7 @@ export default function Login() {
         const didToken = await magic.auth.loginWithMagicLink({
           email: email,
         });
+
         if (didToken) {
           const response = await fetch("/api/login/login", {
             method: "POST",

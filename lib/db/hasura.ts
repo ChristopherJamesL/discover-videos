@@ -20,10 +20,10 @@ export async function isNewUser(token: string, issuer: string) {
   const operationsDoc = `
     query isNewUser($issuer: String!) {
       users(where: {issuer: {_eq: $issuer}}) {
-        email
         id
         issuer
         publicAddress
+        email
       }
     }
   `;
@@ -73,10 +73,10 @@ export async function findVideoIdByUserId(
   const operationsDoc = `
     query findVideoIdByUserId($user_id: String!, $video_id: String!) {
       stats(where: {user_id: {_eq: $user_id}, video_id: {_eq: $video_id}}) {
-        favorited
         id
         user_id
         video_id
+        favorited
         watched
       }
     }
@@ -107,10 +107,10 @@ export async function createStats(
         video_id: $video_id, 
         watched: $watched
       }) {
-        favorited
         id
         user_id
         video_id
+        favorited
         watched
       }
     }
@@ -139,10 +139,10 @@ export async function updateStats(
         where: {user_id: {_eq: $user_id}, video_id: {_eq: $video_id}}, 
         _set: {favorited: $favorited, watched: $watched}) {
         returning {
-          favorited
           id
           user_id
           video_id
+          favorited
           watched
         }
       }
@@ -169,9 +169,9 @@ export async function createNewUser(
     mutation createNewUser($issuer: String!, $email: String!, $publicAddress: String!) {
       insert_users(objects: {email: $email, issuer: $issuer, publicAddress: $publicAddress}) {
         returning {
-          email
           id
           issuer
+          email
         }
       }
     }
@@ -185,6 +185,28 @@ export async function createNewUser(
   );
   const user = response;
   console.log({ user, metadata });
+
+  return response;
+}
+
+export async function getWatchedVideos(token: string, issuer: string) {
+  const operationsDoc = `
+  query watchedVideos($user_id: String!) {
+    stats(where: {
+      watched: {_eq: true}, 
+      user_id: {_eq: $user_id}, 
+    }) {
+      video_id
+    }
+  }
+`;
+
+  const response = await fetchHasuraGraphQL<StatsQueryResponse>(
+    operationsDoc,
+    "watchedVideos",
+    token,
+    { user_id: issuer }
+  );
 
   return response;
 }

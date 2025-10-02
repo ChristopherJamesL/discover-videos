@@ -5,6 +5,7 @@ export interface HomeProps {
   travelVideos: VideosType[] | [];
   productivityVideos: VideosType[] | [];
   popularVideos: VideosType[] | [];
+  watchItAgainVideos: VideosType[] | [];
 }
 
 export interface YoutubeVideoResponse {

@@ -173,12 +173,18 @@ export default function Video({ video }: VideoProps) {
       });
 
       const response = await stats.json();
-      const { favorited, watched } = response.findVideoId[0];
+      const videoStats = response?.findVideoId?.[0];
 
-      if (favorited) {
-        setToggleLike(favorited);
+      if (videoStats) {
+        const { favorited } = videoStats;
+
+        if (favorited) {
+          setToggleLike(favorited);
+        } else {
+          setToggleDislike(true);
+        }
       } else {
-        setToggleDislike(true);
+        console.log("No stats found for this video, possibly unwatched");
       }
     }
 

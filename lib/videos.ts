@@ -5,6 +5,7 @@ import productivityFallback from "@/data/productivity.videos.json";
 import popularFallback from "@/data/popular.videos.json";
 import { VideosType } from "@/components/card/section-cards.types";
 import { getWatchedVideos } from "./db/hasura";
+import { verifyJWT } from "./utils";
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
 
@@ -87,7 +88,8 @@ export const filterVideos = (
         description,
         thumbnails: {
           high: {
-            url: high.url,
+            // url: high.url,
+            url: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
             width: String(high.width),
             height: String(high.height),
           },
@@ -109,11 +111,29 @@ export const getYoutubeVideoById = async (
   return results[0];
 };
 
-export const getWatchItAgainVideos = async (token: string, userId: string) => {
+export const getWatchItAgainVideos = async (token: string) => {
+  const decodedToken = verifyJWT(token);
+  console.log("Decoded Token: ", decodedToken);
+
+  const userId = decodedToken?.issuer ?? "";
+
   const videos = await getWatchedVideos(token, userId);
-  return videos?.data?.stats?.map((video) => {
+  console.log("Videos watched: ", videos);
+
+  const stats = videos?.data?.stats;
+
+  if (!stats || !Array.isArray(stats)) return [];
+
+  return stats.map((video) => {
+    const videoId = video.video_id;
+    console.log("Video: ", video);
+    const imgUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+
     return {
       id: video.video_id,
+      thumbnails: {
+        high: { url: imgUrl },
+      },
     };
   });
 };

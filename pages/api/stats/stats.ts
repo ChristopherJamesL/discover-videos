@@ -19,7 +19,6 @@ const tokenAndVideoCheckAndReturn = (
 
 export default async function stats(req: NextApiRequest, res: NextApiResponse) {
   const token = req.cookies.token ? req.cookies.token : "";
-  // const token = getTokenFromCookies(req);
   const secret = process.env.HASURA_GRAPHQL_JWT_SECRET_KEY ?? "";
   const { favorited, watched = true } = req.body;
   const inputParams = req.method === "POST" ? req.body : req.query;

@@ -1,6 +1,6 @@
 import { VideosType } from "@/components/card/section-cards.types";
-import { FallbackVideo, VideoProps } from "./video.types";
-import { YoutubeVideoItem } from "../index.types";
+import { FallbackVideo, VideoProps } from "../pages/video/video.types";
+import { YoutubeVideoItem } from "../pages/index.types";
 
 export function normalizeFallbackVideo(
   fallbackVideo: FallbackVideo

@@ -8,7 +8,7 @@ import { getVideos, getYoutubeVideoById, fallbackMap } from "@/lib/videos";
 import {
   normalizeFallbackVideo,
   normalizeFallbackVideos,
-} from "./video-fallback-normalize";
+} from "../../lib/video-fallback-normalize";
 
 import disneyvideos from "@/data/disney.videos.json";
 import popularvideos from "@/data/popular.videos.json";

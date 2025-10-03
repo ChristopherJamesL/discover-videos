@@ -1,0 +1,26 @@
+import { GetServerSidePropsContext } from "next";
+import { verifyJWT } from "./utils";
+
+const redirectReturn = () => {
+  return {
+    props: {},
+    redirect: {
+      destination: "/login",
+      permanent: false,
+    },
+  };
+};
+
+const redirectUser = (context: GetServerSidePropsContext) => {
+  const token = context.req.cookies.token;
+  if (!token) return redirectReturn();
+
+  const user = verifyJWT(token);
+  if (!user) return redirectReturn();
+
+  return {
+    token,
+  };
+};
+
+export default redirectUser;

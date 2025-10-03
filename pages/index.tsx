@@ -6,16 +6,18 @@ import { getVideos, getWatchItAgainVideos } from "@/lib/videos";
 import { HomeProps } from "./index.types";
 import { GetServerSidePropsContext } from "next";
 import styles from "@/styles/Home.module.css";
+import redirectUser from "@/utils/redirect-user";
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const token = context.req.cookies.token ?? "";
+  const result = redirectUser(context);
+  if ("redirect" in result) return result;
+  const { token } = result;
 
   const disneyVideos = await getVideos("disney");
   const travelVideos = await getVideos("travel");
   const productivityVideos = await getVideos("productivity");
   const popularVideos = await getVideos("popular");
   const watchItAgainVideos = await getWatchItAgainVideos(token);
-  console.log("Watch it Again Videos: ", watchItAgainVideos);
 
   return {
     props: {

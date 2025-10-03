@@ -5,7 +5,7 @@ import productivityFallback from "@/data/productivity.videos.json";
 import popularFallback from "@/data/popular.videos.json";
 import { VideosType } from "@/components/card/section-cards.types";
 import { getWatchedVideos } from "./db/hasura";
-import { verifyJWT } from "./utils";
+import { verifyJWT } from "../utils/utils";
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
 

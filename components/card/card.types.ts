@@ -3,6 +3,7 @@ export interface CardProps {
   imgUrl: string;
   size: CardSize;
   hoverStyle: number;
+  shouldScale?: boolean;
 }
 
 export type CardSize = "large" | "medium" | "small";

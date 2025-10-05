@@ -3,11 +3,14 @@ import Card from "./card";
 import styles from "./section-cards.module.css";
 import { SectionCardsProps } from "./section-cards.types";
 import Link from "next/link";
+import clsx from "classnames";
 
 export default function SectionCards({
   title,
   videos = [],
   size = "medium",
+  shouldWrap = false,
+  shouldScale,
 }: SectionCardsProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -31,16 +34,12 @@ export default function SectionCards({
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>{title}</h2>
-      <div className={styles.cardWrapper} ref={scrollRef}>
+      <div
+        className={clsx(shouldWrap && styles.wrap, styles.cardWrapper)}
+        ref={scrollRef}
+      >
         {videos.map((video, i) => {
-          const {
-            id,
-            title,
-            thumbnails,
-            // thumbnails: {
-            //   high: { url },
-            // },
-          } = video;
+          const { id, title, thumbnails } = video;
           const imgUrl =
             thumbnails?.high?.url ??
             "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1159&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -52,6 +51,7 @@ export default function SectionCards({
                 hoverStyle={hoverStyle}
                 imgUrl={imgUrl}
                 size={size}
+                shouldScale={shouldScale}
               />
             </Link>
           );

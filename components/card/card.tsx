@@ -12,6 +12,7 @@ export default function Card({
   imgUrl = DEFAULT_IMG_URL,
   size = "medium",
   hoverStyle,
+  shouldScale = true,
 }: CardProps) {
   const [imgSrc, setImgSrc] = useState(imgUrl); // handle image errors while showing default image
   const [isHovered, setIsHovered] = useState(false);
@@ -39,12 +40,17 @@ export default function Card({
 
   const scale = hoverStyle === 1 ? { scaleY: 1.1 } : { scale: 1.1 };
 
-  const motionProps = {
-    whileHover: { ...scale },
-    whileTap: { scale: 0.95 },
-    onHoverStart: () => setIsHovered(true),
-    onHoverEnd: () => setIsHovered(false),
-  };
+  const motionProps = shouldScale
+    ? {
+        whileHover: { ...scale },
+        whileTap: { scale: 0.95 },
+        onHoverStart: () => setIsHovered(true),
+        onHoverEnd: () => setIsHovered(false),
+      }
+    : {
+        onHoverStart: () => setIsHovered(true),
+        onHoverEnd: () => setIsHovered(false),
+      };
 
   return (
     <div className={styles.container}>

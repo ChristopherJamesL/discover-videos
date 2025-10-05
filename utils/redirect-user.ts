@@ -16,10 +16,13 @@ const redirectUser = (context: GetServerSidePropsContext) => {
   if (!token) return redirectReturn();
 
   const user = verifyJWT(token);
+  console.log("Verify JWT function: ", user);
+
   if (!user) return redirectReturn();
 
   return {
     token,
+    user,
   };
 };
 

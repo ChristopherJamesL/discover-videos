@@ -142,9 +142,9 @@ export default function Video({ video }: VideoProps) {
 
   const handleToggleLike = async () => {
     console.log("Like");
-    if (toggleDislike === true) setToggleDislike(!toggleDislike);
     const likeValue = !toggleLike;
     setToggleLike(likeValue);
+    setToggleDislike(false);
 
     const favorited = likeValue ? 1 : 0;
 
@@ -154,9 +154,9 @@ export default function Video({ video }: VideoProps) {
 
   const handleToggleDislike = async () => {
     console.log("Dislike");
-    if (toggleLike === true) setToggleLike(!toggleLike);
     const dislikeValue = !toggleDislike;
     setToggleDislike(dislikeValue);
+    setToggleLike(false);
 
     const updateOrCreate = await runRatingService(0);
     console.log("Data: ", updateOrCreate);
@@ -178,10 +178,15 @@ export default function Video({ video }: VideoProps) {
       if (videoStats) {
         const { favorited } = videoStats;
 
-        if (favorited) {
-          setToggleLike(favorited);
-        } else {
+        if (favorited === 1) {
+          setToggleLike(true);
+          setToggleDislike(false);
+        } else if (favorited === 0) {
+          setToggleLike(false);
           setToggleDislike(true);
+        } else {
+          setToggleLike(false);
+          setToggleDislike(false);
         }
       } else {
         console.log("No stats found for this video, possibly unwatched");

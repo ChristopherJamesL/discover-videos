@@ -4,8 +4,10 @@ import travelFallback from "@/data/travel.videos.json";
 import productivityFallback from "@/data/productivity.videos.json";
 import popularFallback from "@/data/popular.videos.json";
 import { VideosType } from "@/components/card/section-cards.types";
-import { getWatchedVideos } from "./db/hasura";
+import { getWatchedVideos, myListVideos } from "./db/hasura";
 import { verifyJWT } from "../utils/utils";
+import { StatsQueryResponse } from "./db/hasura.types";
+import { DBStatsVideoProps } from "@/pages/browse/my-list.types";
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
 
@@ -111,6 +113,21 @@ export const getYoutubeVideoById = async (
   return results[0];
 };
 
+const structureVideoArray = (videos: DBStatsVideoProps[]) => {
+  return videos.map((video) => {
+    const videoId = video.video_id;
+    console.log("Video: ", video);
+    const imgUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+
+    return {
+      id: video.video_id,
+      thumbnails: {
+        high: { url: imgUrl },
+      },
+    };
+  });
+};
+
 export const getWatchItAgainVideos = async (token: string) => {
   const decodedToken = verifyJWT(token);
   console.log("Decoded Token: ", decodedToken);
@@ -124,16 +141,14 @@ export const getWatchItAgainVideos = async (token: string) => {
 
   if (!stats || !Array.isArray(stats)) return [];
 
-  return stats.map((video) => {
-    const videoId = video.video_id;
-    console.log("Video: ", video);
-    const imgUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  return structureVideoArray(stats);
+};
 
-    return {
-      id: video.video_id,
-      thumbnails: {
-        high: { url: imgUrl },
-      },
-    };
-  });
+export const getMyListVideos = async (token: string, issuer: string) => {
+  const response = await myListVideos(token, issuer);
+  const videos = response?.data?.stats;
+  console.log("Get My List Videos: ", videos);
+  if (!videos || !Array.isArray(videos)) return [];
+
+  return structureVideoArray(videos);
 };

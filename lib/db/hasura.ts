@@ -53,7 +53,6 @@ export async function fetchHasuraGraphQL<T>(
     headers: {
       Authorization: `Bearer ${token}`,
       "Content-Type": "application/json",
-      // "x-hasura-admin-secret": secret,
     },
     body: JSON.stringify({
       query: operationsDoc,
@@ -204,6 +203,28 @@ export async function getWatchedVideos(token: string, issuer: string) {
   const response = await fetchHasuraGraphQL<StatsQueryResponse>(
     operationsDoc,
     "watchedVideos",
+    token,
+    { user_id: issuer }
+  );
+
+  return response;
+}
+
+export async function myListVideos(token: string, issuer: string) {
+  const operationsDoc = `
+  query MyList($user_id: String!) {
+    stats(where: {user_id: {_eq: $user_id}, favorited: {_eq: 1}}) {
+      favorited
+      id
+      user_id
+      video_id      
+    }
+  }
+`;
+
+  const response = await fetchHasuraGraphQL<StatsQueryResponse>(
+    operationsDoc,
+    "MyList",
     token,
     { user_id: issuer }
   );

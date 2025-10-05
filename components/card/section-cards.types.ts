@@ -4,6 +4,8 @@ export interface SectionCardsProps {
   title: string;
   videos: VideosType[];
   size: CardSize;
+  shouldWrap?: boolean;
+  shouldScale?: boolean;
 }
 
 export type VideosType = {

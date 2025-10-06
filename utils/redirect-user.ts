@@ -1,5 +1,5 @@
 import { GetServerSidePropsContext } from "next";
-import { verifyJWT } from "./utils";
+import { verifyJWT } from "../lib/utils";
 
 const redirectReturn = () => {
   return {

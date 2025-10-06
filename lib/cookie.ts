@@ -1,3 +1,4 @@
+import type { NextApiResponse } from "next";
 import * as cookie from "cookie";
 
 const MAX_AGE = 7 * 24 * 60 * 60;
@@ -20,4 +21,13 @@ export const parseCookies = (req: { headers: { cookie?: string } }) => {
 export const getTokenFromCookies = (req: { headers: { cookie?: string } }) => {
   const cookies = parseCookies(req);
   return cookies.token || "";
+};
+
+export const removeTokenCookie = (res: NextApiResponse) => {
+  const val = cookie.serialize("token", "", {
+    maxAge: -1,
+    path: "/",
+  });
+
+  res.setHeader("Set-Cookie", val);
 };

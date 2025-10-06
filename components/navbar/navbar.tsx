@@ -8,6 +8,7 @@ import styles from "@/components/navbar/navbar.module.css";
 export default function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [username, setUsername] = useState("");
+  const [didToken, setDidToken] = useState("");
 
   const router = useRouter();
 
@@ -30,8 +31,20 @@ export default function Navbar() {
   const handleSignOut = async (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     try {
-      const magic = getMagic();
-      await magic.user.logout();
+      // const magic = getMagic();
+      // await magic.user.logout();
+      // router.push("/login");
+      const response = await fetch("/api/logout/logout", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${didToken}`,
+          "Content-Type": "application/json",
+        },
+      });
+
+      const result = await response.json();
+      console.log("Logout Result: ", result);
+
       router.push("/login");
     } catch (e) {
       console.error("Error during logout", e);

@@ -5,7 +5,7 @@ import productivityFallback from "@/data/productivity.videos.json";
 import popularFallback from "@/data/popular.videos.json";
 import { VideosType } from "@/components/card/section-cards.types";
 import { getWatchedVideos, myListVideos } from "./db/hasura";
-import { verifyJWT } from "../utils/utils";
+import { verifyJWT } from "./utils";
 import { StatsQueryResponse } from "./db/hasura.types";
 import { DBStatsVideoProps } from "@/pages/browse/my-list.types";
 

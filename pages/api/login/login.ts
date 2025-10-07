@@ -32,13 +32,11 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
           },
           jwtSecret
         );
-        console.log("Token: ", token);
 
         const isNewUserQuery = await isNewUser(token, issuer);
         if (isNewUserQuery) await createNewUser(token, metaData);
 
         const tokenCookie = setTokenCookie(token);
-        console.log("Token Cookie: ", tokenCookie);
 
         res.setHeader("Set-Cookie", tokenCookie);
         return res.send({ done: true });

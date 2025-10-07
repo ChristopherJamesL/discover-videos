@@ -52,7 +52,6 @@ export default function Login() {
 
           const loggedResponse = await response.json();
           if (loggedResponse.done) {
-            console.log("Logged Response: ", loggedResponse);
             await router.push("/");
           } else {
             setIsLoading(false);

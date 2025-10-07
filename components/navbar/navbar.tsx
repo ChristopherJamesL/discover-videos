@@ -18,7 +18,6 @@ export default function Navbar() {
         const magic = getMagic();
         const { email } = await magic.user.getInfo();
         const didToken = await magic.user.getIdToken();
-        console.log("DID Token: ", didToken);
 
         if (email) setUsername(email);
       } catch (e) {
@@ -31,9 +30,6 @@ export default function Navbar() {
   const handleSignOut = async (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     try {
-      // const magic = getMagic();
-      // await magic.user.logout();
-      // router.push("/login");
       const response = await fetch("/api/logout/logout", {
         method: "POST",
         headers: {
@@ -43,7 +39,6 @@ export default function Navbar() {
       });
 
       const result = await response.json();
-      console.log("Logout Result: ", result);
 
       router.push("/login");
     } catch (e) {

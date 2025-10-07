@@ -35,7 +35,6 @@ export async function isNewUser(token: string, issuer: string) {
     { issuer }
   );
   const user = response?.data?.users[0];
-  console.log({ user, issuer });
 
   return response?.data?.users?.length === 0;
 }
@@ -183,7 +182,6 @@ export async function createNewUser(
     { issuer, email, publicAddress }
   );
   const user = response;
-  console.log({ user, metadata });
 
   return response;
 }

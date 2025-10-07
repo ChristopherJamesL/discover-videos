@@ -116,7 +116,6 @@ export const getYoutubeVideoById = async (
 const structureVideoArray = (videos: DBStatsVideoProps[]) => {
   return videos.map((video) => {
     const videoId = video.video_id;
-    console.log("Video: ", video);
     const imgUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
     return {
@@ -130,12 +129,10 @@ const structureVideoArray = (videos: DBStatsVideoProps[]) => {
 
 export const getWatchItAgainVideos = async (token: string) => {
   const decodedToken = verifyJWT(token);
-  console.log("Decoded Token: ", decodedToken);
 
   const userId = decodedToken?.issuer ?? "";
 
   const videos = await getWatchedVideos(token, userId);
-  console.log("Videos watched: ", videos);
 
   const stats = videos?.data?.stats;
 
@@ -147,7 +144,6 @@ export const getWatchItAgainVideos = async (token: string) => {
 export const getMyListVideos = async (token: string, issuer: string) => {
   const response = await myListVideos(token, issuer);
   const videos = response?.data?.stats;
-  console.log("Get My List Videos: ", videos);
   if (!videos || !Array.isArray(videos)) return [];
 
   return structureVideoArray(videos);

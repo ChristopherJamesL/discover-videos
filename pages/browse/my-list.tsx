@@ -17,7 +17,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   } = result;
 
   const myListVideos = await getMyListVideos(token, issuer);
-  console.log("My List Videos: ", myListVideos);
 
   return {
     props: {

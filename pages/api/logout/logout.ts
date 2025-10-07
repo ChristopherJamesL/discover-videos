@@ -7,8 +7,6 @@ export default async function logout(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  console.log("Logout Route Hit");
-
   try {
     if (!req.cookies.token) {
       console.log("No token");
@@ -24,7 +22,6 @@ export default async function logout(
       return res.status(401).json({ msg: "Invalid Token or ID" });
     }
     const userId = verified.issuer;
-    console.log("User Id Logout Api: ", userId);
 
     removeTokenCookie(res);
 

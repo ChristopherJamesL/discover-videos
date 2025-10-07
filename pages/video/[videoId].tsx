@@ -141,7 +141,6 @@ export default function Video({ video }: VideoProps) {
   };
 
   const handleToggleLike = async () => {
-    console.log("Like");
     const likeValue = !toggleLike;
     setToggleLike(likeValue);
     setToggleDislike(false);
@@ -149,17 +148,14 @@ export default function Video({ video }: VideoProps) {
     const favorited = likeValue ? 1 : 0;
 
     const updateOrCreate = await runRatingService(favorited);
-    console.log("Data: ", updateOrCreate);
   };
 
   const handleToggleDislike = async () => {
-    console.log("Dislike");
     const dislikeValue = !toggleDislike;
     setToggleDislike(dislikeValue);
     setToggleLike(false);
 
     const updateOrCreate = await runRatingService(0);
-    console.log("Data: ", updateOrCreate);
   };
 
   useEffect(() => {

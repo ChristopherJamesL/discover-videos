@@ -23,16 +23,8 @@ export default async function stats(req: NextApiRequest, res: NextApiResponse) {
   const { favorited, watched = true } = req.body;
   const inputParams = req.method === "POST" ? req.body : req.query;
   const { videoId } = inputParams;
-  console.log({
-    token,
-    secret,
-    favorited,
-    watched,
-    videoId,
-  });
 
   const decodedToken = tokenAndVideoCheckAndReturn(res, token, videoId, secret);
-  console.log("Decoded Token: ", decodedToken);
   if (!decodedToken) return;
   const { issuer } = decodedToken;
 
@@ -40,7 +32,6 @@ export default async function stats(req: NextApiRequest, res: NextApiResponse) {
     try {
       const findVideoId =
         (await findVideoIdByUserId(token, issuer, videoId)) ?? [];
-      console.log("Find Video Id: ", findVideoId);
 
       if (findVideoId.length === 0) {
         const response = await createStats(
@@ -72,7 +63,6 @@ export default async function stats(req: NextApiRequest, res: NextApiResponse) {
         (await findVideoIdByUserId(token, issuer, videoId)) ?? [];
 
       if (findVideoId.length > 0) {
-        console.log("Find video Id: ", findVideoId);
         return res.status(200).json({ msg: "Video Found", findVideoId });
       } else {
         return res.status(400).json({ stat: null, msg: "video Id not found" });

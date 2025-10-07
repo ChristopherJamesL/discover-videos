@@ -30,6 +30,10 @@ export default function Navbar() {
   const handleSignOut = async (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     try {
+      const magic = getMagic();
+      const loggedOut = await magic.user.logout();
+      console.log("LOGGED OUT: ", loggedOut);
+
       const response = await fetch("/api/logout/logout", {
         method: "POST",
         headers: {

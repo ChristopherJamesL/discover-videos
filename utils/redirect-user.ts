@@ -11,11 +11,11 @@ const redirectReturn = () => {
   };
 };
 
-const redirectUser = (context: GetServerSidePropsContext) => {
+const redirectUser = async (context: GetServerSidePropsContext) => {
   const token = context.req.cookies.token;
   if (!token) return redirectReturn();
 
-  const user = verifyJWT(token);
+  const user = await verifyJWT(token);
 
   if (!user) return redirectReturn();
 

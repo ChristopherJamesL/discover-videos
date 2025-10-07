@@ -2,12 +2,13 @@ import type { NextApiResponse } from "next";
 import * as cookie from "cookie";
 
 const MAX_AGE = 7 * 24 * 60 * 60;
+const isSecure = process.env.NODE_ENV === "production";
 
 export const setTokenCookie = (token: string) => {
   return cookie.serialize("token", token, {
     maxAge: MAX_AGE,
     expires: new Date(Date.now() + MAX_AGE * 1000),
-    secure: process.env.NODE_ENV === "production",
+    secure: isSecure,
     path: "/",
     httpOnly: true,
     sameSite: "lax",
@@ -26,8 +27,15 @@ export const getTokenFromCookies = (req: { headers: { cookie?: string } }) => {
 export const removeTokenCookie = (res: NextApiResponse) => {
   const val = cookie.serialize("token", "", {
     maxAge: -1,
+    expires: new Date(0),
     path: "/",
+    httpOnly: true,
+    sameSite: "lax",
+    secure: isSecure,
   });
+
+  console.log("Sending cookie header to REMOVE token:");
+  console.log("Set-Cookie:", val);
 
   res.setHeader("Set-Cookie", val);
 };

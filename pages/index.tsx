@@ -9,7 +9,7 @@ import styles from "@/styles/Home.module.css";
 import redirectUser from "@/utils/redirect-user";
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const result = redirectUser(context);
+  const result = await redirectUser(context);
   if ("redirect" in result) return result;
   const { token } = result;
 

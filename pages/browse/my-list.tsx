@@ -9,7 +9,9 @@ import { MyListProps } from "./my-list.types";
 import styles from "@/styles/MyList.module.css";
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const result = redirectUser(context);
+  const result = await redirectUser(context);
+  // console.log("RESULT", result);
+
   if ("redirect" in result) return result;
   const {
     token,

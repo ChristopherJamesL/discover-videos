@@ -128,12 +128,14 @@ const structureVideoArray = (videos: DBStatsVideoProps[]) => {
 };
 
 export const getWatchItAgainVideos = async (token: string) => {
-  const decodedToken = verifyJWT(token);
+  const decodedToken = await verifyJWT(token);
+  if (!decodedToken) {
+    console.error("No decoded token");
+    return [];
+  }
 
-  const userId = decodedToken?.issuer ?? "";
-
+  const userId = decodedToken.issuer;
   const videos = await getWatchedVideos(token, userId);
-
   const stats = videos?.data?.stats;
 
   if (!stats || !Array.isArray(stats)) return [];

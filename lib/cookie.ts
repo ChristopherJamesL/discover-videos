@@ -34,8 +34,5 @@ export const removeTokenCookie = (res: NextApiResponse) => {
     secure: isSecure,
   });
 
-  console.log("Sending cookie header to REMOVE token:");
-  console.log("Set-Cookie:", val);
-
   res.setHeader("Set-Cookie", val);
 };

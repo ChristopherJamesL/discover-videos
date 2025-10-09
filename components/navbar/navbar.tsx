@@ -17,7 +17,7 @@ export default function Navbar() {
       try {
         const magic = getMagic();
         const { email } = await magic.user.getInfo();
-        const didToken = await magic.user.getIdToken();
+        await magic.user.getIdToken();
 
         if (email) setUsername(email);
       } catch (e) {
@@ -31,8 +31,7 @@ export default function Navbar() {
     e.preventDefault();
     try {
       const magic = getMagic();
-      const loggedOut = await magic.user.logout();
-      console.log("LOGGED OUT: ", loggedOut);
+      await magic.user.logout();
 
       const response = await fetch("/api/logout/logout", {
         method: "POST",
@@ -42,7 +41,7 @@ export default function Navbar() {
         },
       });
 
-      const result = await response.json();
+      await response.json();
 
       router.push("/login");
     } catch (e) {

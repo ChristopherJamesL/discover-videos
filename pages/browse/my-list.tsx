@@ -10,7 +10,6 @@ import styles from "@/styles/MyList.module.css";
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   const result = await redirectUser(context);
-  // console.log("RESULT", result);
 
   if ("redirect" in result) return result;
   const {
